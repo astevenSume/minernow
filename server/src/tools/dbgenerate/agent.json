@@ -1,0 +1,295 @@
+{
+  "agent": {
+    "model_name": "Agent",
+    "comment": "agent table",
+    "uid": {
+      "sn": 1,
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "sum_salary": {
+      "sn": 2,
+      "comment": "sum_salary",
+      "null": false,
+      "type": "bigint",
+      "model_name": "SumSalary"
+    },
+    "sum_withdraw": {
+      "sn": 3,
+      "comment": "sum_withdraw",
+      "null": false,
+      "type": "bigint",
+      "model_name": "SumWithdraw"
+    },
+    "sum_can_withdraw": {
+      "sn": 4,
+      "comment": "sum_can_withdraw",
+      "null": false,
+      "type": "bigint",
+      "model_name": "SumCanWithdraw"
+    },
+    "ctime": {
+      "sn": 5,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "mtime": {
+      "sn": 6,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Mtime"
+    },
+    "pwd": {
+      "sn": 7,
+      "comment": "password",
+      "null": false,
+      "type": "varchar",
+      "size": 64,
+      "model_name": "Pwd"
+    }
+  },
+  "agent_channel_commission": {
+    "model_name": "AgentChannelCommission",
+    "comment": "agent channel commission table",
+    "uid": {
+      "sn": 1,
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "channel_id": {
+      "sn": 2,
+      "comment": "channel id",
+      "pk": true,
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "ChannelId"
+    },
+    "ctime": {
+      "sn": 3,
+      "comment": "",
+      "pk": true,
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "mtime": {
+      "sn": 4,
+      "comment": "",
+      "pk": true,
+      "null": false,
+      "type": "bigint",
+      "model_name": "Mtime"
+    },
+    "integer": {
+      "sn": 5,
+      "comment": "commission integer part",
+      "type": "int",
+      "model_name": "Integer"
+    },
+    "decimals": {
+      "sn": 6,
+      "comment": "commission decimals part",
+      "type": "int",
+      "model_name": "Decimals"
+    },
+    "status": {
+      "sn": 7,
+      "comment": "commission status",
+      "type": "tinyint unsigned",
+      "model_name": "Status"
+    }
+  },
+  "agent_path": {
+    "model_name": "AgentPath",
+    "comment": "agent path table",
+    "uid": {
+      "sn": 1,
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "level": {
+      "sn": 2,
+      "comment": "agent level",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "Level"
+    },
+    "sn": {
+      "sn": 3,
+      "comment": "agent serial number on specific level",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "Sn"
+    },
+    "path": {
+      "sn": 4,
+      "comment": "user agent path",
+      "null": false,
+      "type": "text",
+      "index_len": 1024,
+      "model_name": "Path"
+    },
+    "ctime": {
+      "sn": 5,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "mtime": {
+      "sn": 6,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Mtime"
+    },
+    "invite_code": {
+      "sn": 7,
+      "comment": "invite code",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "InviteCode"
+    },
+    "whitelist_id": {
+      "sn": 8,
+      "comment": "agent commission whitelist id",
+      "type": "int unsigned",
+      "model_name": "WhiteListId"
+    },
+    "invite_num": {
+      "sn": 9,
+      "comment": "invite number",
+      "type": "int unsigned",
+      "model_name": "InviteNum"
+    },
+    "parent_uid": {
+      "sn": 10,
+      "comment": "parent uid",
+      "type": "bigint unsigned",
+      "model_name": "ParentUid"
+    },
+    "dividend_position": {
+      "sn": 11,
+      "comment": "month dividend position",
+      "type": "int unsigned",
+      "default": 0,
+      "model_name": "DividendPosition"
+    },
+    "index": [
+      [
+        "level"
+      ],
+      [
+        "sn"
+      ],
+      [
+        "path"
+      ],
+      [
+        "whitelist_id"
+      ]
+    ],
+    "unique index": [
+      [
+        "invite_code"
+      ]
+    ]
+  },
+  "agent_withdraw": {
+    "model_name": "AgentWithdraw",
+    "comment": "agent withdraw table",
+    "id": {
+      "sn": 1,
+      "comment": "agent withdraw id",
+      "pk": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "uid": {
+      "sn": 2,
+      "comment": "user id",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "amount": {
+      "sn": 3,
+      "comment": "amount",
+      "type": "bigint",
+      "model_name": "Amount"
+    },
+    "status": {
+      "sn": 4,
+      "comment": "status",
+      "type": "tinyint unsigned",
+      "model_name": "Status"
+    },
+    "ctime": {
+      "sn": 5,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "mtime": {
+      "sn": 6,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Mtime"
+    },
+    "desc": {
+      "sn": 7,
+      "comment": "",
+      "type": "varchar",
+      "null": true,
+      "size": 256,
+      "model_name": "Desc"
+    },
+    "index": []
+  },
+  "invite_code": {
+    "model_name": "InviteCode",
+    "comment": "invite code table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "code": {
+      "sn": 2,
+      "comment": "code",
+      "type": "varchar",
+      "size": 16,
+      "model_name": "Code"
+    },
+    "status": {
+      "sn": 3,
+      "comment": "status",
+      "type": "tinyint unsigned",
+      "model_name": "Status"
+    },
+    "unique index": [
+      [
+        "code"
+      ]
+    ]
+  }
+}

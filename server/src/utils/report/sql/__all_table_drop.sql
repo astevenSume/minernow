@@ -1,0 +1,15 @@
+DROP TABLE `game_user_month_report`;
+DROP TABLE `month_dividend_record`;
+DROP TABLE `profit_report_daily`;
+DROP TABLE `report_agent_daily`;
+DROP TABLE `report_commission`;
+DROP TABLE `report_eusd_daily`;
+DROP TABLE `report_game_record_ag`;
+DROP TABLE `report_game_record_ky`;
+DROP TABLE `report_game_record_rg`;
+DROP TABLE `report_game_transfer_daily`;
+DROP TABLE `report_game_user_daily`;
+DROP TABLE `report_statistic_game_all`;
+DROP TABLE `report_statistic_sum`;
+DROP TABLE `report_team_daily`;
+DROP TABLE `report_team_game_transfer_daily`;

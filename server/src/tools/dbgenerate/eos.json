@@ -1,0 +1,72 @@
+{
+  "eos_account_keys": {
+    "model_name": "EosAccountKeys",
+    "comment": "Eos Account keys",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "account": {
+      "sn": 3,
+      "comment": "account",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Account"
+    },
+    "public_key_owner": {
+      "sn": 4,
+      "comment": "public key owner",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "PublicKeyOwner"
+    },
+    "private_key_owner": {
+      "sn": 5,
+      "comment": "private key owner",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "PrivateKeyOwner"
+    },
+    "public_key_active": {
+      "sn": 6,
+      "comment": "public key active",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "PublicKeyActive"
+    },
+    "private_key_active": {
+      "sn": 7,
+      "comment": "private key active",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "PrivateKeyActive"
+    },
+    "ctime": {
+      "sn": 11,
+      "comment": "created time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "unique index": [
+      [
+        "account"
+      ]
+    ]
+  }
+}

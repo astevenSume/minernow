@@ -1,0 +1,15 @@
+DELETE FROM `game_user_month_report`;
+DELETE FROM `month_dividend_record`;
+DELETE FROM `profit_report_daily`;
+DELETE FROM `report_agent_daily`;
+DELETE FROM `report_commission`;
+DELETE FROM `report_eusd_daily`;
+DELETE FROM `report_game_record_ag`;
+DELETE FROM `report_game_record_ky`;
+DELETE FROM `report_game_record_rg`;
+DELETE FROM `report_game_transfer_daily`;
+DELETE FROM `report_game_user_daily`;
+DELETE FROM `report_statistic_game_all`;
+DELETE FROM `report_statistic_sum`;
+DELETE FROM `report_team_daily`;
+DELETE FROM `report_team_game_transfer_daily`;

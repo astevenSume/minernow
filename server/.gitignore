@@ -1,0 +1,15 @@
+./idea
+./cache
+./pkg
+.idea
+bin/dbgenerate
+bin/errorgenerate
+bin/otc
+bin/admin
+src/otc/svrlog/*.log
+src/admin/svrlog/*.log
+src/usdtsvr/svrlog/*.log
+src/eusd/svrlog/*.log
+pkg
+#src/otc/conf/app.conf
+

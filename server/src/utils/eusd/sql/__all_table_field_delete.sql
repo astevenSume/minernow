@@ -1,0 +1,11 @@
+DELETE FROM `eos_account`;
+DELETE FROM `eos_otc`;
+DELETE FROM `eos_transaction`;
+DELETE FROM `eos_transaction_info`;
+DELETE FROM `eos_tx_log`;
+DELETE FROM `eos_use_log`;
+DELETE FROM `eos_wealth`;
+DELETE FROM `eos_wealth_log`;
+DELETE FROM `eusd_retire`;
+DELETE FROM `platform_user`;
+DELETE FROM `platform_user_cate`;

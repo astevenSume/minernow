@@ -1,0 +1,500 @@
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=1845679988736
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T023208.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T023155.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T021911.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T021749.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?id=188551845679988736
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T021524.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?id=188551845679988736
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T021456.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?id=188551845679988736
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T021230.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?id=188551845679988736
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T021214.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?mobile=18064480084
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T020935.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T020918.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?transfertype=1&page=1&mobile=18064480084
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T020819.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?transfertype=1&page=1&uid=188551845679988736
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T020735.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?transfertype=1&page=1&mobile=18064480084
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T020702.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?transfertype=&page=1&mobile=18064480084
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T020649.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?transfertype=&page=1&mobile=18064480084
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T020647.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1&mobile=18064480084
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T020638.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T020616.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T020559.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T020554.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T020130.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T015514.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T015142.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T015054.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T014957.404.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T014955.404.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T014342.404.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T013859.404.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T013807.404.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T123500.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T123444.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T123356.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T120531.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T120044.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T113425.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T112942.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T112826.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T112656.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T112601.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T111705.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T111426.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T111307.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T111158.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=18855184567998873&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T111138.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=18855184567998873622&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T111124.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=18855184567998873622&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T110654.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T110641.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T103950.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T103922.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T103014.200.json
+
+###
+
+GET http://localhost:9000/v1/admin/game/chargeinfo?uid=188551845679988736&transfertype=&page=1
+Accept: */*
+Cache-Control: no-cache
+
+{"national_code":"+86","mobile":"18064480084","verify_code":"000000","invite_code":"","nick":"nick001"}
+
+<> 2019-06-06T102811.200.json
+
+###
+

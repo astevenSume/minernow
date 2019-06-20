@@ -1,0 +1,210 @@
+{
+  "config": {
+    "package": "controllers",
+    "need_response_func": "0",
+    "md": "otc"
+  },
+  "0": {
+    "id": "UNKNOWN",
+    "zh": "未知错误"
+  },
+  "1": {
+    "id": "DB",
+    "zh": "数据库操作错误"
+  },
+  "2": {
+    "id": "PARAM_FAILED",
+    "zh": "获取参数失败"
+  },
+  "3": {
+    "id": "NO_SYSMSG",
+    "zh": "未匹配到该id的系统消息"
+  },
+  "4": {
+    "id": "DEL_FAIL",
+    "zh": "数据库删除失败"
+  },
+  "5": {
+    "id": "UPDATE_FAIL",
+    "zh": "数据库更新失败"
+  },
+  "6": {
+    "id": "SIGN_FAIL",
+    "zh": "签名失败"
+  },
+  "7": {
+    "id": "OTC_REQ_FAIL",
+    "zh": "otc请求失败"
+  },
+  "8": {
+    "id": "GEN_GOOGLE_AUTH_FAIL",
+    "zh": "google验证生成失败"
+  },
+  "9": {
+    "id": "RABBIT_MQ_PUBLISH_FAIL",
+    "zh": "rabbitmq发送消息失败"
+  },
+  "10": {
+    "id": "ENCODE_FAIL",
+    "zh": "编码失败"
+  },
+  "11": {
+    "id": "DECODE_FAIL",
+    "zh": "解码失败"
+  },
+  "200": {
+    "id": "SUCCESS"
+  },
+  "201": {
+    "id": "NO_LOGIN",
+    "zh": "请先登录"
+  },
+  "202": {
+    "id": "PARAMS_ERROR",
+    "zh": "参数错误"
+  },
+  "203": {
+    "id": "NO_USER",
+    "zh": "用户不存在"
+  },
+  "204": {
+    "id": "CAPTCHA_ERR",
+    "zh": "验证码错误"
+  },
+  "205": {
+    "id": "TOKEN_ERR",
+    "zh": "Token生成失败"
+  },
+  "206": {
+    "id": "PWD_ERROR",
+    "zh": "密码错误"
+  },
+  "207": {
+    "id": "DB_NO_DATA",
+    "zh": "未找到数据"
+  },
+  "208": {
+    "id": "USER_NAME_ERROR",
+    "zh": "请输入合法的用户名"
+  },
+  "209": {
+    "id": "USER_NO_ACTIVE",
+    "zh": "用户未激活"
+  },
+  "210": {
+    "id": "ID_EXSIT",
+    "zh": "ID已存在"
+  },
+  "211": {
+    "id": "TOKEN_VERIFY_ERR",
+    "zh": "登录TOKEN验证失败，请重新登录"
+  },
+  "212": {
+    "id": "MOBILE_EXSIT",
+    "zh": "手机号已存在"
+  },
+  "213": {
+    "id": "MOBILE_REGISTERED",
+    "zh": "手机号已在列表或者已注册,不能修改"
+  },
+  "214": {
+    "id": "COMMISSION_DISTRIBUTE_FAIL",
+    "zh": "佣金发放失败"
+  },
+  "215": {
+    "id": "APPEAL_SERVICE_LESS",
+    "zh": "请保证至少启用一个申诉客服"
+  },
+  "216": {
+    "id": "CANCEL_ORDER_FAIL",
+    "zh": "取消订单失败"
+  },
+  "217": {
+    "id": "CONFIRM_ORDER_FAIL",
+    "zh": "确认订单失败"
+  },
+  "218": {
+    "id": "EXIST_WHITE_LIST_AGENT",
+    "zh": "已有档位,不能添加"
+  },
+  "219": {
+    "id": "OTC_FAIL",
+    "zh": "OTC处理失败"
+  },
+  "220": {
+    "id": "OTC_ORDER_STATUS_ERR",
+    "zh": "订单状态异常"
+  },
+  "221": {
+    "id": "OTC_ORDER_APPEAL_RESOLVED",
+    "zh": "申述已解决,请不要重复操作"
+  },
+  "222": {
+    "id": "VERITY_GOOGLE_CODE_FAIL",
+    "zh": "验证码错误,请同步手机时间后重新输入"
+  },
+  "223": {
+    "id": "SMS_NO_SUPPORT_CHINA_MOBILE",
+    "zh": "不支持国内手机号发送"
+  },
+  "224":{
+    "id": "HAS_LOWER_LEVEL",
+    "zh": "只能删除最低等级的配置"
+  },
+  "403": {
+    "id": "NO_RIGHT_ERROR",
+    "zh": "没有权限"
+  },
+  "600": {
+    "id": "TASK_NO_EXIST_ERROR",
+    "zh": "定时任务不存在"
+  },
+  "601": {
+    "id": "TASK_STATUS_ERROR",
+    "zh": "定时任务状态错误"
+  },
+  "602": {
+    "id": "TASK_APPNAME_DIFFERENT_ERROR",
+    "zh": "定时任务AppName不一致"
+  },
+  "1001": {
+    "id": "USER_REGISTERED",
+    "zh": "Email用户已存在"
+  },
+  "1002": {
+    "id": "RISK_ALERT",
+    "zh": "游戏风险报警"
+  },
+  "1003": {
+    "id": "GAME_REPORT_CAL",
+    "zh": "游戏报告错误计算"
+  },
+  "1004": {
+    "id": "GAME_DATA_HASED",
+    "zh": "今日数据已生成过"
+  },
+  "801": {
+    "id": "AGENT_WITHDRAW_NO_ENOUGH",
+    "zh": "佣金提现金额不足"
+  },
+  "802": {
+    "id": "AGENT_DECREASE_COMMISSION_FAILED",
+    "zh": "扣除用户佣金失败"
+  },
+  "803": {
+    "id": "AGENT_WITHDRAW_ADD_RECORD_FAILED",
+    "zh": "增加佣金提现记录失败"
+  },
+  "804": {
+    "id": "AGENT_WITHDRAW_UPDATE_RECORD_STATUS_FAILED",
+    "zh": "更新佣金提现记录状态失败"
+  },
+  "805": {
+    "id": "AGENT_WITHDRAW_QUERY_RECORD_FAILED",
+    "zh": "查询佣金提现记录失败"
+  },
+  "806": {
+    "id": "AGENT_WITHDRAW_CHECKED",
+    "zh": "该订单已经审核过了"
+  }
+}

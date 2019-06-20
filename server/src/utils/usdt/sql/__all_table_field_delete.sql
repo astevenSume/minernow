@@ -1,0 +1,12 @@
+DELETE FROM `market_prices`;
+DELETE FROM `prices`;
+DELETE FROM `usdt_account`;
+DELETE FROM `usdt_onchain_balance`;
+DELETE FROM `usdt_onchain_data`;
+DELETE FROM `usdt_onchain_log`;
+DELETE FROM `usdt_onchain_sync_pos`;
+DELETE FROM `usdt_onchain_transaction`;
+DELETE FROM `usdt_prikey`;
+DELETE FROM `usdt_sweep_log`;
+DELETE FROM `usdt_transaction`;
+DELETE FROM `usdt_wealth_log`;

@@ -1,0 +1,718 @@
+{
+  "config": {
+    "package": "controllers",
+    "need_response_func": "0",
+    "md": "otc"
+  },
+  "0": {
+    "id": "UNKNOWN",
+    "zh": "未知错误"
+  },
+  "1": {
+    "id": "DB",
+    "zh": "数据库操作错误"
+  },
+  "2": {
+    "id": "REDIS",
+    "zh": "redis操作错误"
+  },
+  "3": {
+    "id": "DECODE_FAILED",
+    "zh": "解码失败"
+  },
+  "4": {
+    "id": "GEN_ID",
+    "zh": "生成唯一标识失败"
+  },
+  "5": {
+    "id": "PARAM_FAILED",
+    "zh": "获取参数失败"
+  },
+  "6": {
+    "id": "ENCODE_FAILED",
+    "zh": "编码失败"
+  },
+  "7": {
+    "id": "ENCRYPT_FAILED",
+    "zh": "加密失败"
+  },
+  "8": {
+    "id": "DECRYPT_FAILED",
+    "zh": "解密失败"
+  },
+  "200": {
+    "id": "SUCCESS"
+  },
+  "201": {
+    "id": "NO_LOGIN",
+    "zh": "请先登录"
+  },
+  "202": {
+    "id": "PARAMS_ERROR",
+    "zh": "参数错误"
+  },
+  "203": {
+    "id": "NO_USER",
+    "zh": "用户不存在"
+  },
+  "204": {
+    "id": "CAPTCHA_ERR",
+    "zh": "验证码错误"
+  },
+  "205": {
+    "id": "SMS_ERR",
+    "zh": "短信验证码错误"
+  },
+  "206": {
+    "id": "MOBILE_ERR",
+    "zh": "手机号错误"
+  },
+  "207": {
+    "id": "SMS_SEND_FAIL",
+    "zh": "短信验证码发送失败"
+  },
+  "208": {
+    "id": "SMS_VERIFY_FAIL_TOO_MATH",
+    "zh": "短信验证码验证失败次数太多，请重新获取短信"
+  },
+  "209": {
+    "id": "TOKEN_ERR",
+    "zh": "Token生成失败"
+  },
+  "210": {
+    "id": "CLIENT_TYPE_UNKOWN",
+    "zh": "客户端类型未知"
+  },
+  "211": {
+    "id": "NO_AUTH",
+    "zh": "没有权限"
+  },
+  "212": {
+    "id": "USER_NO_ACTIVE",
+    "zh": "您被禁止登录了，如有疑问，请联系客服"
+  },
+  "213": {
+    "id": "TOKEN_VERIFY_ERR",
+    "zh": "登录TOKEN验证失败，请重新登录"
+  },
+  "214": {
+    "id": "LOGIN_SIGN_VERIFY_ERR",
+    "zh": "认证信息已过期，请重新登录"
+  },
+  "215": {
+    "id": "PASSWORD_ERR",
+    "zh": "密码错误"
+  },
+  "216": {
+    "id": "PASSWORD_FORMAT_ERR",
+    "zh": "密码格式错误"
+  },
+  "217": {
+    "id": "PASSWORD_REPEAT_ERR",
+    "zh": "新旧密码不能相同"
+  },
+  "218": {
+    "id": "PASSWORD_UNAVAILABLE_ERR",
+    "zh": "支付密码未设置或不可用，请设置支付密码"
+  },
+  "219": {
+    "id": "PASSWORD_TOKEN_ERR",
+    "zh": "支付密码验证信息已过期"
+  },
+  "220": {
+    "id": "PAY_SIGN_VERIFY_ERR",
+    "zh": "认证信息已过期，请使用支付密码认证"
+  },
+  "221": {
+    "id": "SMS_SEND_REQ_TOO_MUCH",
+    "zh": "请不要频繁操作"
+  },
+  "222": {
+    "id": "PASSWORD_TOKEN_EMPTY",
+    "zh": "请输入支付密码"
+  },
+  "223": {
+    "id": "UP_FILE_FAIL",
+    "zh": "文件上传失败"
+  },
+  "224": {
+    "id": "APPEAL_SERVICE_LESS",
+    "zh": "当前客服繁忙,请稍后再试"
+  },
+  "225": {
+    "id": "PASSWORD_LOCK",
+    "zh": "支付密码已被锁定，请5分钟后再试"
+  },
+  "226": {
+    "id": "UP_FILE_EXT",
+    "zh": "请选择正确格式的文件"
+  },
+  "227": {
+    "id": "OTC_ORDER_APPEAL_RESOLVED",
+    "zh": "申述已解决,请不要重复操作"
+  },
+  "228": {
+    "id": "NEW_MOBILE_ALREADY_PRESENCE",
+    "zh": "新手机号已存在"
+  },
+  "229": {
+    "id": "USER_UPDATE_MOBILE_FAIL",
+    "zh": "用户更新手机号失败"
+  },
+  "230": {
+    "id": "QR_CODE_DECODE_FAIL",
+    "zh": "二维码解析失败,请检查"
+  },
+  "231": {
+    "id": "REQUEST_OUTDATED",
+    "zh": "请求超过有效时间"
+  },
+  "232": {
+    "id": "APPEAL_EXIST",
+    "zh": "订单已申诉,正在处理中"
+  },
+  "233": {
+    "id": "SERVER_STOPPING",
+    "zh": "服务器将进行维护,无法本操作"
+  },
+  "234": {
+    "id": "SERVER_STOPPED",
+    "zh": "服务器正在维护中"
+  },
+  "235": {
+    "id": "SALARY_HAD_GET",
+    "zh": "已领取"
+  },
+  "236": {
+    "id": "OTHER_SIDE_APPEAL",
+    "zh": "订单申诉中,非申诉方请联系客服"
+  },
+  "237": {
+    "id": "CAN_NOT_APPEAL",
+    "zh": "订单状态不可申诉"
+  },
+  "400": {
+    "id": "PAYMENT_METHOD_UNSUPPORTED",
+    "zh": "不支持的收付款类型"
+  },
+  "401": {
+    "id": "PAYMENT_METHOD_CHANGE_STATUS_FAILED",
+    "zh": "修改收付款方式状态失败"
+  },
+  "402": {
+    "id": "PAYMENT_METHOD_EDIT_FAILED",
+    "zh": "编辑收付款方式失败"
+  },
+  "403": {
+    "id": "PAYMENT_METHOD_EDIT_NOTHING",
+    "zh": "收付款方式属性无修改"
+  },
+  "404": {
+    "id": "PAYMENT_METHOD_OWNER_ERROR",
+    "zh": "非该收付款方式拥有者"
+  },
+  "405": {
+    "id": "PAYMENT_METHOD_UNABLE",
+    "zh": "收付款方式不可用"
+  },
+  "406": {
+    "id": "PAYMENT_METHOD_NO_MATCH",
+    "zh": "收付款方式不可用"
+  },
+  "600": {
+    "id": "USDT_ACCOUNT_NO_FOUND",
+    "zh": "usdt账户不存在"
+  },
+  "601": {
+    "id": "USDT_PRI_KEY_NO_FOUND",
+    "zh": "usdt账户对应的密钥不存在"
+  },
+  "602": {
+    "id": "USDT_ADDRESS_UNAVAILABLE",
+    "zh": "usdt地址不可用"
+  },
+  "603": {
+    "id": "USDT_TRANSFER_FAILED",
+    "zh": "usdt转账失败"
+  },
+  "604": {
+    "id": "USDT_NO_ENOUGH",
+    "zh": "usdt余额不足"
+  },
+  "605": {
+    "id": "USDT_MORTGAGE_FAILED",
+    "zh": "usdt抵押失败"
+  },
+  "606": {
+    "id": "USDT_BALANCE_INVALID",
+    "zh": "usdt资产数据不可用"
+  },
+  "607": {
+    "id": "USDT_CURRENCY_PARAM_ERROR",
+    "zh": "usdt金额参数错误"
+  },
+  "608": {
+    "id": "USDT_RELEASE_FAILED",
+    "zh": "usdt赎回失败"
+  },
+  "609": {
+    "id": "USDT_CHAIN_BALANCE_ERROR",
+    "zh": "usdt链上账户数据错误"
+  },
+  "610": {
+    "id": "USDT_CHAIN_TRANSACTION_ERROR",
+    "zh": "usdt链上交易数据错误"
+  },
+  "611": {
+    "id": "USDT_CHAIN_SYNC_TOO_FREQUENTLY",
+    "zh": "usdt同步链上交易数据过于频繁"
+  },
+  "612": {
+    "id": "USDT_CALC_BALANCE_FAILED",
+    "zh": "usdt演算账户金额失败"
+  },
+  "613": {
+    "id": "USDT_GET_SIGNED_TX_FAILED",
+    "zh": "usdt获取离线签名交易数据失败"
+  },
+  "614": {
+    "id": "USDT_FROZEN_WEALTH_ERR",
+    "zh": "usdt资金冻结失败"
+  },
+  "615": {
+    "id": "USDT_USDT_TRANSFER_COMMIT_ERR",
+    "zh": "usdt转账申请失败,请联系客服"
+  },
+  "616": {
+    "id": "USDT_REQUEST_FORM_NO_FOUND",
+    "zh": "申请单不存在"
+  },
+  "617": {
+    "id": "USDT_CANCEL_FAILED",
+    "zh": "取消申请单失败"
+  },
+  "618": {
+    "id": "USDT_APPROVE_FAILED",
+    "zh": "审批失败"
+  },
+  "619": {
+    "id": "USDT_TRANSFER_ON_CHAIN_FAILED",
+    "zh": "推送交易失败"
+  },
+  "620": {
+    "id": "USDT_OPRATION_DENY_TRANSFER",
+    "zh": "暂未开放手机号转账"
+  },
+  "621": {
+    "id": "USDT_CREATE_ACCOUNT_FAILED",
+    "zh": "usdt账户创建失败"
+  },
+  "622": {
+    "id": "USDT_WEALTH_LOG_FAILED",
+    "zh": "usdt记录资产日志失败"
+  },
+  "623": {
+    "id": "USDT_CLEAR_FROZEN_FAILED",
+    "zh": "usdt清除冻结资产失败"
+  },
+  "624": {
+    "id": "USDT_WEALTH_LOG_STATUS_ERR",
+    "zh": "usdt订单状态错误"
+  },
+  "625": {
+    "id": "USDT_QUERY_ONCHAIN_RECHARGE_FAILED",
+    "zh": "usdt获取链上充值数据失败"
+  },
+  "626": {
+    "id": "USDT_DEPOSIT_FAILED",
+    "zh": "usdt修改充值数据失败"
+  },
+  "627": {
+    "id": "USDT_UNFROZEN_FAILED",
+    "zh": "usdt解冻资产失败"
+  },
+  "628": {
+    "id": "USDT_TRANSFER_TO_SELF_ERR",
+    "zh": "usdt无法给自己转账"
+  },
+  "629": {
+    "id": "USDT_ACCOUNT_LOCK",
+    "zh": "账号被锁定"
+  },
+  "630": {
+    "id": "USDT_TRANSFER_FROZEN_FAILED",
+    "zh": "交易资金冻结失败"
+  },
+  "631": {
+    "id": "USDT_TRANSFER_UNFROZEN_FAILED",
+    "zh": "交易资金解冻失败"
+  },
+  "632": {
+    "id": "USDT_TRANSFER_CLEAR_FROZEN_FAILED",
+    "zh": "交易资金清除失败"
+  },
+  "633": {
+    "id": "USDT_FEE_CURRENCY_PARAM_ERROR",
+    "zh": "usdt手续费金额参数错误"
+  },
+  "634": {
+    "id": "USDT_TRANSFER_LOWER_LIMIT_PARAM_ERROR",
+    "zh": "usdt转账最低限额获取失败"
+  },
+  "635": {
+    "id": "USDT_TRANSFER_AMOUNT_LESS_THEN_LOWER_LIMIT",
+    "zh": "usdt转账金额小于最低限额"
+  },
+  "636": {
+    "id": "USDT_TRANSFER_AUDIT_LIMIT_PARAM_ERROR",
+    "zh": "usdt转账金额免审核配置获取失败"
+  },
+  "637": {
+    "id": "USDT_TRANSFER_METHOD_UNSUPPORTED",
+    "zh": "未知的转账方式"
+  },
+  "640": {
+    "id": "USDT_GET_FEE_FAILED",
+    "zh": "获取推荐手续费失败"
+  },
+  "641": {
+    "id": "GET_BTC_TO_USDT_RATE_FAILED",
+    "zh": "获取推荐手续费失败"
+  },
+  "650": {
+    "id": "USDT_TRANSFER_TAMPER_PROTECTION_VERIFY_FAILED",
+    "zh": "交易数据防篡改校验失败"
+  },
+  "651": {
+    "id": "USDT_TRANSFER_TAMPERED",
+    "zh": "交易数据遭篡改"
+  },
+  "800": {
+    "id": "QUERY_AGENT_FAILED",
+    "zh": "查询用户代理信息失败"
+  },
+  "801": {
+    "id": "QUERY_AGENT_INVITE_CODE_FAILED",
+    "zh": "查询用户邀请码信息失败"
+  },
+  "802": {
+    "id": "AGENT_DECREASE_COMMISSION_FAILED",
+    "zh": "扣除用户佣金失败"
+  },
+  "803": {
+    "id": "AGENT_WITHDRAW_ADD_RECORD_FAILED",
+    "zh": "增加佣金提现记录失败"
+  },
+  "804": {
+    "id": "AGENT_WITHDRAW_UPDATE_RECORD_STATUS_FAILED",
+    "zh": "更新佣金提现记录状态失败"
+  },
+  "805": {
+    "id": "AGENT_WITHDRAW_QUERY_RECORD_FAILED",
+    "zh": "查询佣金提现记录失败"
+  },
+  "806": {
+    "id": "AGENT_WITHDRAW_NO_ENOUGH",
+    "zh": "佣金提现金额不足"
+  },
+  "1001": {
+    "id": "USER_REGISTERED",
+    "zh": "用户已经注册过"
+  },
+  "1002": {
+    "id": "REGISTER_ERR",
+    "zh": "注册失败"
+  },
+  "1003": {
+    "id": "USER_NEED_INVITE_CODE",
+    "zh": "请输入邀请码"
+  },
+  "1004": {
+    "id": "USER_INVITE_CODE_ERROR",
+    "zh": "请输入正确的邀请码"
+  },
+  "1500": {
+    "id": "OTC_APPLY_EXCHANGER_PENDING",
+    "zh": "你的申请正在处理中"
+  },
+  "1501": {
+    "id": "OTC_NOT_FOUND_EXCHANGER",
+    "zh": "没有找到承兑商"
+  },
+  "1502": {
+    "id": "OTC_TRADE_TOO_SMALL",
+    "zh": "设置的交易金额太小 金额要大于100CNY"
+  },
+  "1503": {
+    "id": "OTC_LACK_AVAILABLE_TO_SELL",
+    "zh": "可以出售的EUSD太少了"
+  },
+  "1504": {
+    "id": "OTC_DAY_LIMIT_SELL",
+    "zh": "达到今日出售限额"
+  },
+  "1505": {
+    "id": "OTC_ORDER_NOT_FOUND",
+    "zh": "没有找到订单"
+  },
+  "1506": {
+    "id": "OTC_ORDER_CANNOT_CANCEL",
+    "zh": "订单不能取消"
+  },
+  "1507": {
+    "id": "OTC_ORDER_STATUS_ERR",
+    "zh": "订单状态异常"
+  },
+  "1508": {
+    "id": "OTC_BUY_LOWER_LIMIT",
+    "zh": "购买达到限额"
+  },
+  "1509": {
+    "id": "OTC_SETTING_ERR",
+    "zh": "设置失败"
+  },
+  "1510": {
+    "id": "OTC_PAY_TYPE_EMPTY",
+    "zh": "支付方式为空"
+  },
+  "1511": {
+    "id": "OTC_PAY_TYPE_ERR",
+    "zh": "支付方式错误"
+  },
+  "1512": {
+    "id": "OTC_NOT_MATCH_EXCHANGER",
+    "zh": "没有找到合适的承兑商"
+  },
+  "1513": {
+    "id": "OTC_TRADE_TOO_BIG",
+    "zh": "交易金额超过限额"
+  },
+  "1514": {
+    "id": "OTC_PAYMENT_NOT_FOUND",
+    "zh": "未找到收付款方式"
+  },
+  "1515": {
+    "id": "OTC_LACK_PAYMENT",
+    "zh": "缺少支付方式或者支付方式都已经达到限额了"
+  },
+  "1516": {
+    "id": "OTC_ACCOUNT_LOCK",
+    "zh": "账号被锁定"
+  },
+  "1517": {
+    "id": "OTC_NOT_A_EXCHANGER",
+    "zh": "你不是一个承兑商"
+  },
+  "1518": {
+    "id": "OTC_TRANSFER_AVAILABLE_LACK",
+    "zh": "余额不足"
+  },
+  "1519": {
+    "id": "REDIS_LOCK_ERR",
+    "zh": "操作超时（Lock）"
+  },
+  "1520": {
+    "id": "OP_TOO_FAST",
+    "zh": "操作太快"
+  },
+  "1521": {
+    "id": "EUSD_TRANSFER_SELF",
+    "zh": "不能自己转账给自己"
+  },
+  "2001": {
+    "id": "SIGN_TRANSACTION_FAIL",
+    "zh": "交易签名失败"
+  },
+  "2002": {
+    "id": "GET_BLOCK_INFO_ERROR",
+    "zh": "获取区块信息失败"
+  },
+  "2003": {
+    "id": "PUSH_TRANSACTION_ERROR",
+    "zh": "推送交易失败"
+  },
+  "2004": {
+    "id": "ACTION_TO_ABI_ERROR",
+    "zh": "转换ABI失败"
+  },
+  "2005": {
+    "id": "BUY_RAM_TO_ABI_ERROR",
+    "zh": "购买RAM转换ABI失败"
+  },
+  "2006": {
+    "id": "DELEGATE_TO_ABI_ERROR",
+    "zh": "抵押转换ABI失败"
+  },
+  "2007": {
+    "id": "NEW_ACCOUNT_TO_ABI_ERROR",
+    "zh": "创建账号转换ABI失败"
+  },
+  "2008": {
+    "id": "UNDELEGATE_TO_ABI_ERROR",
+    "zh": "赎回转换ABI失败"
+  },
+  "2009": {
+    "id": "BIND_WALLET_ERROR",
+    "zh": "绑定钱包失败"
+  },
+  "2010": {
+    "id": "CREATE_ACCOUNT_ERR",
+    "zh": "生成新钱包账号失败"
+  },
+  "2011": {
+    "id": "UID_PARAMS_ERROR",
+    "zh": "UID 参数错误"
+  },
+  "2012": {
+    "id": "TRANSFER_LACK_AVAILABLE",
+    "zh": "可用TOKEN不足"
+  },
+  "2013": {
+    "id": "TRANSFER_FAIL_LOCK",
+    "zh": "转账锁定失败，请重试"
+  },
+  "2014": {
+    "id": "CONFIG_LACK",
+    "zh": "配置信息缺失"
+  },
+  "2015": {
+    "id": "TRANSFER_DB_OUT",
+    "zh": "出账失败（DB）"
+  },
+  "2016": {
+    "id": "TRANSFER_DB_INTO",
+    "zh": "入账失败（DB）"
+  },
+  "2017": {
+    "id": "USER_OTC_ABLE",
+    "zh": "用户成为承兑商错误"
+  },
+  "2018": {
+    "id": "WEALTH_LOCK",
+    "zh": "账户被冻结"
+  },
+  "2019": {
+    "id": "QUANTITY_ERR",
+    "zh": "数量不正确"
+  },
+  "2020": {
+    "id": "EUSD_LACK",
+    "zh": "币数量不足"
+  },
+  "2021": {
+    "id": "WEALTH_NOT_FOUND",
+    "zh": "未找到账号信息"
+  },
+  "2022": {
+    "id": "WEALTH_OTC_TRANSFER",
+    "zh": "划转失败"
+  },
+  "2023": {
+    "id": "OTC_TRANSFER_LOCK",
+    "zh": "OTC冻结资金失败"
+  },
+  "2024": {
+    "id": "OTC_TRANSFER_UNLOCK",
+    "zh": "OTC解冻资金失败"
+  },
+  "2025": {
+    "id": "OTC_TRANSFER_OUT",
+    "zh": "OTC转账失败"
+  },
+  "2026": {
+    "id": "OTC_SET_SELL",
+    "zh": "设置出售失败，请重试"
+  },
+  "2027": {
+    "id": "OTC_SET_BUY",
+    "zh": "设置买入失败，请重试"
+  },
+  "2028": {
+    "id": "OTC_NOT_EXCHANGER",
+    "zh": "用户不是承兑商"
+  },
+  "2029": {
+    "id": "GAME_SETTLEMENT_ERR",
+    "zh": "游戏结算异常"
+  },
+  "2030": {
+    "id": "TRANSFER_UNABLE",
+    "zh": "被禁止进行交易动作"
+  },
+  "2400": {
+    "id": "GAME_UNSUPPORTED_CHANNEL",
+    "zh": "不支持的游戏渠道"
+  },
+  "2401": {
+    "id": "GAME_CHANNEL_UNSET_RATE",
+    "zh": "游戏渠道未设置充值比率"
+  },
+  "2500": {
+    "id": "GAME_LOGIN_FAILED",
+    "zh": "游戏登录失败"
+  },
+  "2501": {
+    "id": "GAME_ADD_USER_FAILED",
+    "zh": "增加游戏账户失败"
+  },
+  "2502": {
+    "id": "GAME_USER_NO_EXIST",
+    "zh": "游戏账户不存在"
+  },
+  "2503": {
+    "id": "GAME_ADD_REDEEM_LOG_FAILED",
+    "zh": "增加游戏转账记录失败"
+  },
+  "2504": {
+    "id": "GAME_REDEEM_IN_FAILED",
+    "zh": "游戏账户存款失败"
+  },
+  "2505": {
+    "id": "GAME_REDEEM_OUT_FAILED",
+    "zh": "游戏账户提款失败"
+  },
+  "2506": {
+    "id": "GAME_ONLINE_PLAYERS_FAILED",
+    "zh": "查询游戏在线玩家失败"
+  },
+  "2507": {
+    "id": "GAME_PLAYER_NOT_OFFLINE",
+    "zh": "游戏玩家当前在线"
+  },
+  "2508": {
+    "id": "GAME_BALANCE_FALIED",
+    "zh": "获取游戏玩家余额信息失败"
+  },
+  "2801": {
+    "id": "SYSTEM_NOTIFICATION_FALIED",
+    "zh": "获取系统消息失败"
+  },
+  "2802": {
+    "id": "SYSTEM_NOTIFICATION_ISREAD_FALIED",
+    "zh": "获取系统通知已读失败"
+  },
+  "2901": {
+    "id": "RECHARGE_AMOUNT_NO_RIGHT",
+    "zh": "重置金额不足以还清所欠的eusd"
+  },
+  "2902": {
+    "id": "DIVIDEND_TO_AGENT_ERR",
+    "zh": "分发月分红给下级代理失败"
+  },
+  "2903": {
+    "id": "NO_FOUND_MONTH_DIVIDEND_RECORD",
+    "zh": "未找到月分红记录"
+  },
+  "2950": {
+    "id": "WITHDRAW_MORE_THAN_THRESHOLD",
+    "zh": "提现金额超过阈值"
+  },
+  "2951": {
+    "id": "WITHDRAW_FROZEN",
+    "zh": "有待审核的提现记录,提现功能暂时冻结,请联系客服"
+  },
+  "2952": {
+    "id": "PROFIT_THRESHOLD_PARAM_ERROR",
+    "zh": "分润阈值配置获取失败"
+  }
+}

@@ -1,0 +1,12 @@
+DROP TABLE `market_prices`;
+DROP TABLE `prices`;
+DROP TABLE `usdt_account`;
+DROP TABLE `usdt_onchain_balance`;
+DROP TABLE `usdt_onchain_data`;
+DROP TABLE `usdt_onchain_log`;
+DROP TABLE `usdt_onchain_sync_pos`;
+DROP TABLE `usdt_onchain_transaction`;
+DROP TABLE `usdt_prikey`;
+DROP TABLE `usdt_sweep_log`;
+DROP TABLE `usdt_transaction`;
+DROP TABLE `usdt_wealth_log`;

@@ -1,0 +1,2294 @@
+{
+  "permission": {
+    "model_name": "Permission",
+    "comment": "permission table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "slug": {
+      "sn": 2,
+      "comment": "permission_name",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Slug"
+    },
+    "desc": {
+      "sn": 3,
+      "comment": "permission_desc",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Desc"
+    },
+    "ctime": {
+      "sn": 4,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 5,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    },
+    "dtime": {
+      "sn": 6,
+      "comment": "D time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Dtime"
+    }
+  },
+  "role": {
+    "model_name": "Role",
+    "comment": "role table",
+    "id": {
+      "sn": 1,
+      "comment": "role id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "name": {
+      "sn": 2,
+      "comment": "role name",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Name"
+    },
+    "desc": {
+      "sn": 3,
+      "comment": "role description",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Desc"
+    },
+    "ctime": {
+      "sn": 4,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 5,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    }
+  },
+  "role_permission": {
+    "model_name": "RolePermission",
+    "comment": "role_permission table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "roleid": {
+      "sn": 2,
+      "comment": "roleid",
+      "pk": false,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned",
+      "model_name": "RoleId"
+    },
+    "permissionid": {
+      "sn": 3,
+      "comment": "pemissionid",
+      "pk": false,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned",
+      "model_name": "Pemissionid"
+    },
+    "index": [
+      [
+        "roleid",
+        "permissionid"
+      ]
+    ]
+  },
+  "role_admin": {
+    "model_name": "RoleAdmin",
+    "comment": "role_admin table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "roleid": {
+      "sn": 2,
+      "comment": "role_id",
+      "pk": false,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned",
+      "model_name": "RoleId"
+    },
+    "adminid": {
+      "sn": 3,
+      "comment": "admin_id",
+      "pk": false,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned",
+      "model_name": "AdminId"
+    },
+    "granted_by": {
+      "sn": 4,
+      "comment": "role granted_by",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "GrantedBy"
+    },
+    "granted_at": {
+      "sn": 5,
+      "comment": "granted_at time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "GrantedAt"
+    },
+    "index": [
+      [
+        "roleid",
+        "adminid"
+      ]
+    ]
+  },
+  "admin_user": {
+    "model_name": "AdminUser",
+    "comment": "admin user table",
+    "id": {
+      "sn": 1,
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "name": {
+      "sn": 2,
+      "comment": "user name",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Name"
+    },
+    "email": {
+      "sn": 3,
+      "comment": "user email",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Email"
+    },
+    "status": {
+      "sn": 4,
+      "model_name": "Status",
+      "comment": "status",
+      "null": false,
+      "type": "tinyint"
+    },
+    "ctime": {
+      "sn": 5,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 6,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    },
+    "dtime": {
+      "sn": 7,
+      "comment": "forbit time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Dtime"
+    },
+    "login_time": {
+      "sn": 8,
+      "comment": "last login time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "LoginTime"
+    },
+    "pwd": {
+      "sn": 9,
+      "comment": "password",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "default": "",
+      "model_name": "Pwd"
+    },
+    "whitelist_ips": {
+      "sn": 10,
+      "comment": "whitelist_ips",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "default": "",
+      "model_name": "WhitelistIps"
+    },
+    "is_bind": {
+      "sn": 11,
+      "comment": "is_bind",
+      "type": "bool",
+      "null": false,
+      "default": false,
+      "model_name": "IsBind"
+    },
+    "secret_id": {
+      "sn": 12,
+      "comment": "secret_id",
+      "null": false,
+      "type": "varchar",
+      "size": 128,
+      "default": "",
+      "model_name": "SecretId"
+    },
+    "qr_code": {
+      "sn": 13,
+      "comment": "qr_code",
+      "null": false,
+      "type": "text",
+      "model_name": "QrCode"
+    },
+    "unique index": [
+      [
+        "email"
+      ]
+    ]
+  },
+  "operation_log": {
+    "model_name": "OperationLog",
+    "comment": "OperationLog table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "admin_id": {
+      "sn": 2,
+      "comment": "admin_id",
+      "pk": false,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned",
+      "model_name": "AdminId"
+    },
+    "method": {
+      "sn": 3,
+      "comment": "req method",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "default": "",
+      "model_name": "Method"
+    },
+    "route": {
+      "sn": 4,
+      "comment": "route ",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "default": "",
+      "model_name": "Route"
+    },
+    "action": {
+      "sn": 5,
+      "comment": "action",
+      "null": false,
+      "type": "int",
+      "default": 0,
+      "model_name": "Action"
+    },
+    "input": {
+      "sn": 6,
+      "comment": "input",
+      "null": false,
+      "type": "varchar",
+      "size": 65535,
+      "default": "",
+      "model_name": "Input"
+    },
+    "user_agent": {
+      "sn": 7,
+      "comment": "user agent",
+      "null": false,
+      "type": "varchar",
+      "size": 512,
+      "default": "",
+      "model_name": "UserAgent"
+    },
+    "ips": {
+      "sn": 8,
+      "comment": "ip",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "default": "",
+      "model_name": "Ips"
+    },
+    "response_code": {
+      "sn": 9,
+      "comment": "response code",
+      "null": false,
+      "type": "int",
+      "default": 0,
+      "model_name": "ResponseCode"
+    },
+    "ctime": {
+      "sn": 10,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "index": [
+      [
+        "action",
+        "admin_id"
+      ]
+    ]
+  },
+  "commissionrates": {
+    "model_name": "Commissionrates",
+    "comment": "commissionrates table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint",
+      "model_name": "Id"
+    },
+    "min": {
+      "sn": 2,
+      "comment": "min",
+      "pk": false,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned",
+      "model_name": "Min"
+    },
+    "max": {
+      "sn": 3,
+      "comment": "max",
+      "pk": false,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned",
+      "model_name": "Max"
+    },
+    "commission": {
+      "sn": 4,
+      "comment": "commission",
+      "null": false,
+      "type": "int",
+      "default": 0,
+      "model_name": "Commission"
+    },
+    "precision": {
+      "sn": 5,
+      "comment": "precision",
+      "null": false,
+      "type": "int",
+      "default": 0,
+      "model_name": "Precision"
+    },
+    "ctime": {
+      "sn": 6,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 7,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    }
+  },
+  "smscodes": {
+    "model_name": "Smscodes",
+    "comment": "smscodes table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint",
+      "model_name": "Id"
+    },
+    "national_code": {
+      "sn": 2,
+      "comment": "nationalCode",
+      "null": false,
+      "type": "varchar",
+      "size": 32,
+      "default": "",
+      "model_name": "NationalCode"
+    },
+    "mobile": {
+      "sn": 3,
+      "comment": "mobile",
+      "null": false,
+      "type": "varchar",
+      "size": 32,
+      "default": "",
+      "model_name": "Mobile"
+    },
+    "action": {
+      "sn": 4,
+      "comment": "action",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "default": "",
+      "model_name": "Action"
+    },
+    "code": {
+      "sn": 5,
+      "comment": "code",
+      "null": false,
+      "type": "varchar",
+      "size": 16,
+      "default": "",
+      "model_name": "Code"
+    },
+    "status": {
+      "sn": 6,
+      "comment": "status",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Status"
+    },
+    "ctime": {
+      "sn": 7,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "etime": {
+      "sn": 8,
+      "comment": "expired time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Etime"
+    }
+  },
+  "smstemplates": {
+    "model_name": "Smstemplates",
+    "comment": "smstemplates table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint",
+      "model_name": "Id"
+    },
+    "name": {
+      "sn": 2,
+      "comment": "name",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "default": "",
+      "model_name": "Name"
+    },
+    "type": {
+      "sn": 3,
+      "comment": "type",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Type"
+    },
+    "template": {
+      "sn": 4,
+      "comment": "template",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "default": "",
+      "model_name": "Template"
+    },
+    "ctime": {
+      "sn": 5,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 6,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    },
+    "unique index": [
+      [
+        "type"
+      ]
+    ]
+  },
+  "sys_msg": {
+    "model_name": "SystemMessage",
+    "comment": "System Message",
+    "id": {
+      "sn": 1,
+      "model_name": "Id",
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned"
+    },
+    "key": {
+      "sn": 2,
+      "model_name": "Key",
+      "comment": "System Message Key",
+      "null": false,
+      "type": "varchar",
+      "size": 200
+    },
+    "buyer": {
+      "sn": 3,
+      "model_name": "Buyer",
+      "comment": "Buyer Show",
+      "null": false,
+      "type": "varchar",
+      "size": 400
+    },
+    "seller": {
+      "sn": 4,
+      "model_name": "Seller",
+      "comment": "Seller Show",
+      "null": false,
+      "type": "varchar",
+      "size": 400
+    },
+    "admin": {
+      "sn": 5,
+      "model_name": "Admin",
+      "comment": "Admin Show",
+      "null": false,
+      "type": "varchar",
+      "size": 400
+    },
+    "ctime": {
+      "sn": 6,
+      "comment": "",
+      "null": true,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 7,
+      "comment": "",
+      "null": true,
+      "type": "bigint",
+      "model_name": "Utime"
+    },
+    "dtime": {
+      "sn": 8,
+      "comment": "",
+      "null": true,
+      "type": "bigint",
+      "model_name": "Dtime"
+    }
+  },
+  "app_version": {
+    "model_name": "AppVersion",
+    "comment": "app version table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint",
+      "model_name": "Id"
+    },
+    "version": {
+      "sn": 2,
+      "comment": "app version show",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Version"
+    },
+    "version_num": {
+      "sn": 3,
+      "comment": "app version num",
+      "null": false,
+      "type": "int",
+      "model_name": "VersionNum"
+    },
+    "changelog": {
+      "sn": 4,
+      "comment": "change log",
+      "null": false,
+      "type": "varchar",
+      "size": 300,
+      "model_name": "ChangeLog"
+    },
+    "download": {
+      "sn": 5,
+      "comment": "download url",
+      "null": false,
+      "type": "varchar",
+      "size": 300,
+      "model_name": "Download"
+    },
+    "system": {
+      "sn": 6,
+      "comment": "system type",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "System"
+    },
+    "status": {
+      "sn": 7,
+      "comment": "app version status",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Status"
+    },
+    "ctime": {
+      "sn": 8,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 9,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    },
+    "dtime": {
+      "sn": 10,
+      "comment": "update dtime",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Dtime"
+    }
+  },
+  "apps": {
+    "model_name": "Apps",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "position": {
+      "sn": 2,
+      "comment": "position",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "Position"
+    },
+    "name": {
+      "sn": 3,
+      "comment": "name",
+      "null": false,
+      "type": "varchar",
+      "size": 64,
+      "model_name": "Name"
+    },
+    "desc": {
+      "sn": 4,
+      "comment": "desc",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Desc"
+    },
+    "url": {
+      "sn": 5,
+      "comment": "url",
+      "null": false,
+      "type": "varchar",
+      "size": 128,
+      "model_name": "Url"
+    },
+    "icon_url": {
+      "sn": 6,
+      "comment": "icon_url",
+      "null": false,
+      "type": "varchar",
+      "size": 128,
+      "model_name": "IconUrl"
+    },
+    "type_id": {
+      "sn": 7,
+      "comment": "type_id",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "TypeId"
+    },
+    "channel_id": {
+      "sn": 8,
+      "comment": "channel_id",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "ChannelId"
+    },
+    "app_id": {
+      "sn": 9,
+      "comment": "app_id",
+      "null": false,
+      "type": "varchar",
+      "size": 50,
+      "model_name": "AppId"
+    },
+    "featured": {
+      "sn": 10,
+      "comment": "featured",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Featured"
+    },
+    "status": {
+      "sn": 11,
+      "comment": "status",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Status"
+    },
+    "orientation": {
+      "sn": 12,
+      "comment": "orientation",
+      "null": false,
+      "type": "tinyint",
+      "default": 1,
+      "model_name": "Orientation"
+    },
+    "ctime": {
+      "sn": 13,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 14,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    },
+    "index": [
+      [
+        "type_id"
+      ]
+    ]
+  },
+  "agent_white_list": {
+    "model_name": "AgentWhiteList",
+    "comment": "agent white list table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "name": {
+      "sn": 2,
+      "comment": "name",
+      "null": false,
+      "type": "varchar",
+      "size": 64,
+      "model_name": "Name"
+    },
+    "commission": {
+      "sn": 3,
+      "comment": "commission",
+      "null": false,
+      "type": "int",
+      "model_name": "Commission"
+    },
+    "precision": {
+      "sn": 4,
+      "comment": "precision",
+      "null": false,
+      "type": "int",
+      "model_name": "Precision"
+    },
+    "ctime": {
+      "sn": 5,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 6,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    }
+  },
+  "banner": {
+    "model_name": "Banner",
+    "comment": "banner table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "subject": {
+      "sn": 2,
+      "comment": "subject",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Subject"
+    },
+    "image": {
+      "sn": 3,
+      "comment": "image",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Image"
+    },
+    "url": {
+      "sn": 4,
+      "comment": "image",
+      "null": false,
+      "type": "varchar",
+      "default": "",
+      "size": 256,
+      "model_name": "Url"
+    },
+    "status": {
+      "sn": 5,
+      "comment": "status",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Status"
+    },
+    "ctime": {
+      "sn": 6,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 7,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    },
+    "stime": {
+      "sn": 8,
+      "comment": "start time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Stime"
+    },
+    "etime": {
+      "sn": 9,
+      "comment": "end time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Etime"
+    }
+  },
+  "config": {
+    "model_name": "Config",
+    "comment": "data config, key, value, desc",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "action": {
+      "sn": 2,
+      "comment": "action",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Action"
+    },
+    "key": {
+      "sn": 3,
+      "comment": "key",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Key"
+    },
+    "value": {
+      "sn": 4,
+      "comment": "value",
+      "null": false,
+      "type": "text",
+      "model_name": "Value"
+    },
+    "desc": {
+      "sn": 5,
+      "comment": "descripe",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Desc"
+    },
+    "ctime": {
+      "sn": 6,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "unique index": [
+      [
+        "key"
+      ]
+    ],
+    "index": [
+      [
+        "action"
+      ]
+    ]
+  },
+  "app_type": {
+    "model_name": "AppType",
+    "comment": "app type table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "name": {
+      "sn": 2,
+      "comment": "name",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Name"
+    },
+    "desc": {
+      "sn": 3,
+      "comment": "desc",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Desc"
+    },
+    "ctime": {
+      "sn": 4,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 5,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    }
+  },
+  "app_channel": {
+    "model_name": "AppChannel",
+    "comment": "app channel table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "is_third_hall": {
+      "sn": 2,
+      "comment": "is_third_hall",
+      "type": "tinyint",
+      "null": false,
+      "model_name": "IsThirdHall"
+    },
+    "name": {
+      "sn": 3,
+      "comment": "name",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Name"
+    },
+    "desc": {
+      "sn": 4,
+      "comment": "desc",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Desc"
+    },
+    "exchangeRate": {
+      "sn": 5,
+      "comment": "exchange rate",
+      "null": false,
+      "type": "int",
+      "default": 0,
+      "model_name": "ExchangeRate"
+    },
+    "precision": {
+      "sn": 6,
+      "comment": "precision",
+      "null": false,
+      "type": "int",
+      "default": 0,
+      "model_name": "Precision"
+    },
+    "profit_rate": {
+      "sn": 7,
+      "comment": "profit_rate",
+      "null": false,
+      "type": "int",
+      "default": 0,
+      "model_name": "ProfitRate"
+    },
+    "icon_url": {
+      "sn": 8,
+      "comment": "icon_url",
+      "null": false,
+      "type": "varchar",
+      "size": 128,
+      "model_name": "IconUrl"
+    },
+    "ctime": {
+      "sn": 9,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 10,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    }
+  },
+  "sys_notification": {
+    "model_name": "SysNotification",
+    "comment": "sys_notification table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "content": {
+      "sn": 2,
+      "comment": "content",
+      "null": false,
+      "type": "varchar",
+      "size": 128,
+      "model_name": "Content"
+    },
+    "admin_id": {
+      "sn": 3,
+      "comment": "admin_id",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "AdminId"
+    },
+    "status": {
+      "sn": 4,
+      "comment": "status",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Status"
+    },
+    "ctime": {
+      "sn": 5,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 6,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    },
+    "index": [
+      [
+        "admin_id"
+      ]
+    ]
+  },
+  "ip_white_list": {
+    "model_name": "IpWhiteList",
+    "comment": "ip white list for otc",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "ip": {
+      "sn": 2,
+      "comment": "ip address",
+      "null": false,
+      "type": "varchar",
+      "model_name": "Ip"
+    }
+  },
+  "appeal_service": {
+    "model_name": "AppealService",
+    "comment": "appeal_service table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "admin_id": {
+      "sn": 2,
+      "comment": "admin_id",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "AdminId"
+    },
+    "wechat": {
+      "sn": 3,
+      "comment": "wechat",
+      "null": false,
+      "type": "varchar",
+      "size": 32,
+      "model_name": "Wechat"
+    },
+    "qr_code": {
+      "sn": 4,
+      "comment": "",
+      "type": "varchar",
+      "size": 300,
+      "model_name": "QrCode"
+    },
+    "status": {
+      "sn": 5,
+      "comment": "status",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Status"
+    },
+    "unique index": [
+      [
+        "admin_id"
+      ]
+    ]
+  },
+  "top_agent": {
+    "model_name": "TopAgent",
+    "comment": "top_agent table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "national_code": {
+      "sn": 2,
+      "comment": "national_code",
+      "null": false,
+      "type": "varchar",
+      "size": 16,
+      "model_name": "NationalCode"
+    },
+    "mobile": {
+      "sn": 3,
+      "comment": "mobile",
+      "null": false,
+      "type": "varchar",
+      "size": 32,
+      "model_name": "Mobile"
+    },
+    "status": {
+      "sn": 4,
+      "comment": "status",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Status"
+    },
+    "ctime": {
+      "sn": 5,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 6,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    },
+    "unique index": [
+      [
+        "mobile"
+      ]
+    ]
+  },
+  "endpoint": {
+    "model_name": "Endpoint",
+    "comment": "endpoint table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "endpoint": {
+      "sn": 2,
+      "comment": "endpoint",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Endpoint"
+    },
+    "ctime": {
+      "sn": 3,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 4,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    }
+  },
+  "announcement": {
+    "model_name": "Announcement",
+    "comment": "system announcement",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "type": {
+      "sn": 2,
+      "comment": "type",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Type"
+    },
+    "title": {
+      "sn": 3,
+      "comment": "title",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Title"
+    },
+    "content": {
+      "sn": 4,
+      "comment": "content",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 500,
+      "model_name": "Content"
+    },
+    "stime": {
+      "sn": 5,
+      "comment": "start time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Stime"
+    },
+    "etime": {
+      "sn": 6,
+      "comment": "end time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Etime"
+    },
+    "ctime": {
+      "sn": 7,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 8,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    }
+  },
+  "config_warning": {
+    "model_name": "ConfigWarning",
+    "comment": "config_warning table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "type": {
+      "sn": 2,
+      "comment": "type",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Type"
+    },
+    "national_code": {
+      "sn": 3,
+      "comment": "national_code",
+      "null": false,
+      "type": "varchar",
+      "size": 16,
+      "model_name": "NationalCode"
+    },
+    "mobile": {
+      "sn": 4,
+      "comment": "mobile",
+      "null": false,
+      "type": "varchar",
+      "size": 32,
+      "model_name": "Mobile"
+    },
+    "sms_type": {
+      "sn": 5,
+      "comment": "sms_type",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "SmsType"
+    },
+    "unique index": [
+      [
+        "type",
+        "national_code",
+        "mobile"
+      ]
+    ]
+  },
+  "app_whitelist": {
+    "model_name": "AppWhitelist",
+    "comment": "app_whitelist table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "channel_id": {
+      "sn": 2,
+      "comment": "channel_id",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "ChannelId"
+    },
+    "app_id": {
+      "sn": 3,
+      "comment": "app_id",
+      "null": false,
+      "type": "varchar",
+      "size": 16,
+      "model_name": "AppId"
+    },
+    "ctime": {
+      "sn": 4,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    }
+  },
+  "otc_stat": {
+    "model_name": "OtcStat",
+    "comment": "OtcStat",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "date": {
+      "sn": 2,
+      "model_name": "Date",
+      "comment": "date",
+      "null": false,
+      "type": "int unsigned"
+    },
+    "num_login": {
+      "sn": 4,
+      "model_name": "NumLogin",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "num_user_new": {
+      "sn": 5,
+      "model_name": "NumUserNew",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "num_order": {
+      "sn": 6,
+      "model_name": "NumOrder",
+      "comment": "date",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "num_order_deal": {
+      "sn": 7,
+      "model_name": "NumOrderDeal",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "num_order_buy": {
+      "sn": 8,
+      "model_name": "NumOrderBuy",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "num_order_sell": {
+      "sn": 9,
+      "model_name": "NumOrderSell",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "num_funds": {
+      "sn": 15,
+      "model_name": "NumFunds",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "num_amount": {
+      "sn": 16,
+      "model_name": "NumAmount",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "num_amount_buy": {
+      "sn": 17,
+      "model_name": "NumAmountBuy",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "num_amount_sell": {
+      "sn": 18,
+      "model_name": "NumAmountSell",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "num_fee_buy": {
+      "sn": 20,
+      "model_name": "NumFeeBuy",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "num_fee_sell": {
+      "sn": 21,
+      "model_name": "NumFeeSell",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "game_recharge": {
+      "sn": 25,
+      "model_name": "GameRecharge",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "game_withdrawal": {
+      "sn": 26,
+      "model_name": "GameWithdrawal",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "usdt_recharge": {
+      "sn": 30,
+      "model_name": "UsdtRecharge",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "usdt_withdrawal": {
+      "sn": 31,
+      "model_name": "UsdtWithdrawal",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "usdt_fee": {
+      "sn": 32,
+      "model_name": "UsdtFee",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "unique index": [
+      [
+        "date"
+      ]
+    ]
+  },
+  "otc_stat_all_people": {
+    "model_name": "OtcStatAllPeople",
+    "comment": "OtcStatAllPeople",
+    "uid": {
+      "sn": 1,
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "buy_order": {
+      "sn": 6,
+      "model_name": "BuyOrder",
+      "comment": "",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "sell_order": {
+      "sn": 7,
+      "model_name": "SellOrder",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "buy_eusd": {
+      "sn": 8,
+      "model_name": "BuyEusd",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "sell_eusd": {
+      "sn": 9,
+      "model_name": "SellEusd",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "usdt_recharge": {
+      "sn": 30,
+      "model_name": "UsdtRecharge",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    },
+    "usdt_withdrawal": {
+      "sn": 31,
+      "model_name": "UsdtWithdrawal",
+      "null": false,
+      "type": "int unsigned",
+      "default": 0
+    }
+  },
+  "task": {
+    "model_name": "Task",
+    "comment": "task table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "name": {
+      "sn": 2,
+      "comment": "task name",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Name"
+    },
+    "alia": {
+      "sn": 3,
+      "comment": "task alia",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Alia"
+    },
+    "app_name": {
+      "sn": 4,
+      "comment": "application name",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "AppName"
+    },
+    "func_name": {
+      "sn": 5,
+      "comment": "task function name",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "FuncName"
+    },
+    "spec": {
+      "sn": 6,
+      "comment": "task spec string",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Spec"
+    },
+    "status": {
+      "sn": 7,
+      "comment": "status",
+      "null": false,
+      "type": "tinyint unsigned",
+      "model_name": "Status"
+    },
+    "ctime": {
+      "sn": 8,
+      "comment": "create time",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 9,
+      "comment": "update time",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "Utime"
+    },
+    "desc": {
+      "sn": 10,
+      "comment": "task detail string",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Desc"
+    },
+    "index": [
+      [
+        "name"
+      ]
+    ],
+    "unique index": [
+      [
+        "app_name",
+        "name"
+      ]
+    ]
+  },
+  "task_result": {
+    "model_name": "TaskResult",
+    "comment": "task result table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "app_name": {
+      "sn": 2,
+      "comment": "app name",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "AppName"
+    },
+    "region_id": {
+      "sn": 3,
+      "comment": "region id",
+      "null": false,
+      "type": "bigint",
+      "model_name": "RegionId"
+    },
+    "server_id": {
+      "sn": 4,
+      "comment": "server id",
+      "null": false,
+      "type": "bigint",
+      "model_name": "ServerId"
+    },
+    "name": {
+      "sn": 5,
+      "comment": "name",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Name"
+    },
+    "code": {
+      "sn": 6,
+      "comment": "result code",
+      "null": false,
+      "type": "int",
+      "model_name": "Code"
+    },
+    "detail": {
+      "sn": 7,
+      "comment": "task result detail",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Detail"
+    },
+    "begin_time": {
+      "sn": 8,
+      "comment": "begin time",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "BeginTime"
+    },
+    "end_time": {
+      "sn": 8,
+      "comment": "end time",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "EndTime"
+    },
+    "ctime": {
+      "sn": 9,
+      "comment": "create time",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "Ctime"
+    },
+    "index": [
+      [
+        "name",
+        "region_id",
+        "server_id"
+      ],
+      [
+        "app_name"
+      ]
+    ]
+  },
+  "server_node": {
+    "model_name": "ServerNode",
+    "comment": "server node table",
+    "app_name": {
+      "sn": 1,
+      "comment": "application name",
+      "null": false,
+      "pk": true,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "AppName"
+    },
+    "region_id": {
+      "sn": 2,
+      "comment": "region id",
+      "null": false,
+      "pk": true,
+      "type": "bigint",
+      "model_name": "RegionId"
+    },
+    "server_id": {
+      "sn": 3,
+      "comment": "server id",
+      "null": false,
+      "pk": true,
+      "type": "bigint",
+      "model_name": "ServerId"
+    },
+    "last_ping": {
+      "sn": 5,
+      "comment": "last ping timestamp",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "LastPing"
+    }
+  },
+  "month_dividend_position_conf": {
+    "model_name": "MonthDividendPositionConf",
+    "comment": "month_dividend_position_conf table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint",
+      "model_name": "Id"
+    },
+    "agent_lv": {
+      "sn": 2,
+      "comment": "agent_lv",
+      "pk": false,
+      "null": false,
+      "auto": false,
+      "type": "int",
+      "model_name": "AgentLv"
+    },
+    "position": {
+      "sn": 3,
+      "comment": "position",
+      "pk": false,
+      "null": false,
+      "auto": false,
+      "type": "int",
+      "model_name": "Position"
+    },
+    "min": {
+      "sn": 4,
+      "comment": "min",
+      "pk": false,
+      "null": false,
+      "auto": false,
+      "type": "bigint",
+      "model_name": "Min"
+    },
+    "max": {
+      "sn": 5,
+      "comment": "max",
+      "pk": false,
+      "null": false,
+      "auto": false,
+      "type": "bigint",
+      "model_name": "Max"
+    },
+    "activity_num": {
+      "sn": 6,
+      "comment": "activity num",
+      "pk": false,
+      "null": false,
+      "auto": false,
+      "type": "int",
+      "model_name": "ActivityNum"
+    },
+    "dividend_ratio": {
+      "sn": 7,
+      "comment": "dividend_ratio num",
+      "pk": false,
+      "null": false,
+      "auto": false,
+      "type": "int",
+      "model_name": "DividendRatio"
+    },
+    "ctime": {
+      "sn": 8,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 9,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    }
+  },
+  "activity_user_conf": {
+    "model_name": "ActivityUserConf",
+    "comment": "月分红活跃用户定义的配置",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "play_game_day": {
+      "sn": 2,
+      "comment": "玩了并且有投注的天数 配置",
+      "null": false,
+      "type": "int",
+      "model_name": "PlayGameDay"
+    },
+    "bet_amount": {
+      "sn": 3,
+      "comment": "投注额配置",
+      "null": false,
+      "type": "bigint",
+      "model_name": "BetAmount"
+    },
+    "effective_bet_amount": {
+      "sn": 4,
+      "comment": "累计有效投注额(本人加无限下级)的配置",
+      "null": false,
+      "type": "bigint",
+      "model_name": "EffectiveBetAmount"
+    }
+  },
+  "menu_conf": {
+    "model_name": "MenuConf",
+    "comment": "菜单配置",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "pid": {
+      "sn": 2,
+      "comment": "父节点的id，一级菜单为0",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "PId"
+    },
+    "level": {
+      "sn": 3,
+      "comment": "层级,1是一级菜单,2是二级菜单",
+      "null": false,
+      "type": "int",
+      "model_name": "Level"
+    },
+    "name": {
+      "sn": 4,
+      "comment": "菜单名称",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Name"
+    },
+    "path": {
+      "sn": 5,
+      "comment": "菜单路径",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Path"
+    },
+    "icon": {
+      "sn": 6,
+      "comment": "一级菜单图标",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Icon"
+    },
+    "hide_in_menu": {
+      "sn": 7,
+      "comment": "是否隐藏",
+      "null": false,
+      "type": "bool",
+      "model_name": "HideInMenu"
+    },
+    "component": {
+      "sn": 8,
+      "comment": "组件",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Component"
+    },
+    "order_id": {
+      "sn": 9,
+      "comment": "排序id",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "OrderId"
+    },
+    "ctime": {
+      "sn": 10,
+      "comment": "创建时间",
+      "null": false,
+      "type": "bigint",
+      "model_name": "CTime"
+    },
+    "utime": {
+      "sn": 11,
+      "comment": "修改时间",
+      "null": false,
+      "type": "bigint",
+      "model_name": "UTime"
+    }
+  },
+  "menu_access": {
+    "model_name": "MenuAccess",
+    "comment": "角色菜单权限表",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "role_id": {
+      "sn": 2,
+      "comment": "角色id",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "RoleId"
+    },
+    "menu_id": {
+      "sn": 3,
+      "comment": "菜单id",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "MenuId"
+    }
+  },
+  "month_dividend_white_list": {
+    "model_name": "MonthDividendWhiteList",
+    "comment": "月分红白名单",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "name": {
+      "sn": 2,
+      "comment": "name",
+      "null": false,
+      "type": "varchar",
+      "size": 64,
+      "model_name": "Name"
+    },
+    "dividend_ratio": {
+      "sn": 3,
+      "comment": "dividend_ratio",
+      "null": false,
+      "type": "int",
+      "model_name": "DividendRatio"
+    },
+    "ctime": {
+      "sn": 4,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 5,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    }
+  },
+  "profit_threshold": {
+    "model_name": "ProfitThreshold",
+    "comment": "分润阈值配置表",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int unsigned",
+      "model_name": "Id"
+    },
+    "threshold": {
+      "sn": 2,
+      "comment": "threshold",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Threshold"
+    },
+    "admin_id": {
+      "sn": 3,
+      "comment": "dividend_ratio",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "AdminId"
+    },
+    "ctime": {
+      "sn": 4,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 5,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    }
+  }
+}

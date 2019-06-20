@@ -1,0 +1,842 @@
+{
+  "eos_wealth": {
+    "model_name": "EosWealth",
+    "comment": "Eos wealth",
+    "uid": {
+      "sn": 1,
+      "model_name": "Uid",
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned"
+    },
+    "status": {
+      "sn": 2,
+      "model_name": "Status",
+      "comment": "",
+      "null": false,
+      "type": "tinyint"
+    },
+    "account": {
+      "sn": 3,
+      "model_name": "Account",
+      "comment": "account",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "balance": {
+      "sn": 4,
+      "model_name": "Balance",
+      "comment": "balance",
+      "pk": false,
+      "null": false,
+      "type": "bigint"
+    },
+    "available": {
+      "sn": 5,
+      "model_name": "Available",
+      "comment": "available balance",
+      "pk": false,
+      "null": false,
+      "type": "bigint"
+    },
+    "game": {
+      "sn": 6,
+      "model_name": "Game",
+      "comment": "game balance",
+      "pk": false,
+      "null": false,
+      "type": "bigint"
+    },
+    "trade": {
+      "sn": 7,
+      "model_name": "Trade",
+      "comment": "trade frozen balance",
+      "pk": false,
+      "null": false,
+      "type": "bigint"
+    },
+    "transfer": {
+      "sn": 8,
+      "model_name": "Transfer",
+      "comment": "transfering balance",
+      "null": false,
+      "type": "bigint"
+    },
+    "transfer_game": {
+      "sn": 9,
+      "model_name": "TransferGame",
+      "comment": "transfering to game balance",
+      "null": false,
+      "type": "bigint"
+    },
+    "is_exchanger": {
+      "sn": 10,
+      "model_name": "IsExchanger",
+      "comment": "",
+      "null": false,
+      "type": "tinyint"
+    },
+    "ctime": {
+      "sn": 11,
+      "model_name": "Ctime",
+      "comment": "created time",
+      "null": false,
+      "type": "bigint"
+    },
+    "utime": {
+      "sn": 12,
+      "model_name": "Utime",
+      "comment": "update time",
+      "null": false,
+      "type": "bigint"
+    },
+    "index": []
+  },
+  "eos_otc": {
+    "model_name": "EosOtc",
+    "comment": "Eos otc",
+    "uid": {
+      "sn": 1,
+      "model_name": "Uid",
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned"
+    },
+    "account": {
+      "sn": 2,
+      "model_name": "Account",
+      "comment": "account",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "status": {
+      "sn": 3,
+      "model_name": "Status",
+      "comment": "status",
+      "null": false,
+      "type": "tinyint"
+    },
+    "available": {
+      "sn": 8,
+      "model_name": "Available",
+      "comment": "available",
+      "null": false,
+      "type": "bigint"
+    },
+    "trade": {
+      "sn": 10,
+      "model_name": "Trade",
+      "comment": "otc trade balance",
+      "null": false,
+      "type": "bigint"
+    },
+    "transfer": {
+      "sn": 11,
+      "model_name": "Transfer",
+      "comment": "transfering balance",
+      "null": false,
+      "type": "bigint"
+    },
+    "sell_state": {
+      "sn": 13,
+      "model_name": "SellState",
+      "default": "",
+      "type": "varchar",
+      "size": 200
+    },
+    "sell_pay_type": {
+      "sn": 14,
+      "model_name": "SellPayType",
+      "comment": "",
+      "null": false,
+      "type": "tinyint unsigned"
+    },
+    "sell_able": {
+      "sn": 15,
+      "model_name": "SellAble",
+      "comment": "",
+      "null": false,
+      "type": "bool"
+    },
+    "sell_rmb_day": {
+      "sn": 16,
+      "model_name": "SellRmbDay",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "sell_rmb_today": {
+      "sn": 17,
+      "model_name": "SellRmbToday",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "sell_rmb_lower_limit": {
+      "sn": 18,
+      "model_name": "SellRmbLowerLimit",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "sell_utime": {
+      "sn": 19,
+      "model_name": "SellUTime",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "buy_able": {
+      "sn": 20,
+      "model_name": "BuyAble",
+      "comment": "",
+      "null": false,
+      "type": "bool"
+    },
+    "buy_rmb_day": {
+      "sn": 21,
+      "model_name": "BuyRmbDay",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "buy_rmb_today": {
+      "sn": 22,
+      "model_name": "BuyRmbToday",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "buy_rmb_lower_limit": {
+      "sn": 23,
+      "model_name": "BuyRmbLowerLimit",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "buy_utime": {
+      "sn": 24,
+      "model_name": "BuyUTime",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "buy_state": {
+      "sn": 25,
+      "model_name": "BuyState",
+      "default": "",
+      "type": "varchar",
+      "size": 200
+    },
+    "ctime": {
+      "sn": 30,
+      "model_name": "Ctime",
+      "comment": "created time",
+      "null": false,
+      "type": "bigint"
+    },
+    "utime": {
+      "sn": 31,
+      "model_name": "Utime",
+      "comment": "update time",
+      "null": false,
+      "type": "bigint"
+    }
+  },
+  "eos_account": {
+    "model_name": "EosAccount",
+    "comment": "Eos Account",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "uid": {
+      "sn": 2,
+      "comment": "uid",
+      "pk": true,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "account": {
+      "sn": 3,
+      "comment": "account",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Account"
+    },
+    "balance": {
+      "sn": 9,
+      "comment": "balance",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Balance"
+    },
+    "status": {
+      "sn": 10,
+      "comment": "",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Status"
+    },
+    "ctime": {
+      "sn": 11,
+      "comment": "created time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 12,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Utime"
+    },
+    "index": [
+      [
+        "uid"
+      ],
+      [
+        "account"
+      ]
+    ]
+  },
+  "eos_transaction_info": {
+    "model_name": "EosTransactionInfo",
+    "comment": "Eos Transaction info",
+    "id": {
+      "sn": 1,
+      "model_name": "Id",
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned"
+    },
+    "transaction_id": {
+      "sn": 3,
+      "model_name": "TransactionId",
+      "comment": "Transaction id",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "block_num": {
+      "sn": 4,
+      "model_name": "BlockNum",
+      "comment": "block num",
+      "null": false,
+      "type": "int unsigned"
+    },
+    "ctime": {
+      "sn": 5,
+      "comment": "created time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "processed": {
+      "sn": 20,
+      "model_name": "Processed",
+      "comment": "processed info",
+      "null": false,
+      "type": "text"
+    },
+    "index": [
+      [
+        "transaction_id"
+      ]
+    ]
+  },
+  "eos_transaction": {
+    "model_name": "EosTransaction",
+    "comment": "Eos Transaction",
+    "id": {
+      "sn": 1,
+      "model_name": "Id",
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned"
+    },
+    "type": {
+      "sn": 2,
+      "model_name": "Type",
+      "comment": "Transaction type",
+      "null": false,
+      "type": "tinyint unsigned"
+    },
+    "transaction_id": {
+      "sn": 3,
+      "model_name": "TransactionId",
+      "comment": "Transaction id",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "block_num": {
+      "sn": 4,
+      "model_name": "BlockNum",
+      "comment": "block num",
+      "null": false,
+      "type": "int unsigned"
+    },
+    "status": {
+      "sn": 5,
+      "model_name": "Status",
+      "comment": "status",
+      "null": false,
+      "type": "tinyint"
+    },
+    "payer": {
+      "sn": 6,
+      "model_name": "Payer",
+      "comment": "Payer Account",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "receiver": {
+      "sn": 7,
+      "model_name": "Receiver",
+      "comment": "Receiver Account",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "quantity": {
+      "sn": 8,
+      "model_name": "Quantity",
+      "comment": "Token quantity",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "memo": {
+      "sn": 9,
+      "model_name": "Memo",
+      "comment": "transaction memo",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "ctime": {
+      "sn": 11,
+      "comment": "created time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 12,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Utime"
+    },
+    "index": [
+      [
+        "payer"
+      ],
+      [
+        "receiver"
+      ]
+    ]
+  },
+  "eos_use_log": {
+    "model_name": "EosUseLog",
+    "comment": "Eos use log",
+    "id": {
+      "sn": 1,
+      "model_name": "Id",
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned"
+    },
+    "type": {
+      "sn": 2,
+      "model_name": "Type",
+      "comment": "Transaction type",
+      "null": false,
+      "type": "tinyint unsigned"
+    },
+    "tid": {
+      "sn": 3,
+      "model_name": "Tid",
+      "comment": "eos_transaction id",
+      "pk": false,
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "status": {
+      "sn": 4,
+      "model_name": "Status",
+      "comment": "status",
+      "null": false,
+      "type": "tinyint"
+    },
+    "tid_recover": {
+      "sn": 5,
+      "model_name": "TidRecover",
+      "comment": "eos_transaction id",
+      "pk": false,
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "quantity_num": {
+      "sn": 8,
+      "model_name": "QuantityNum",
+      "comment": "Eos Num * 10000",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "index": [
+      [
+        "status"
+      ]
+    ]
+  },
+  "eos_wealth_log": {
+    "model_name": "EosWealthLog",
+    "comment": "Eos wealth log",
+    "id": {
+      "sn": 1,
+      "model_name": "Id",
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned"
+    },
+    "uid": {
+      "sn": 2,
+      "model_name": "Uid",
+      "comment": "uid",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "uid2": {
+      "sn": 3,
+      "model_name": "Uid2",
+      "comment": "uid",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "ttype": {
+      "sn": 5,
+      "model_name": "TType",
+      "comment": "Transaction type",
+      "null": false,
+      "type": "tinyint unsigned"
+    },
+    "status": {
+      "sn": 6,
+      "model_name": "Status",
+      "comment": "Transaction status",
+      "null": false,
+      "type": "tinyint"
+    },
+    "txid": {
+      "sn": 10,
+      "model_name": "Txid",
+      "comment": "Transaction id",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "quantity": {
+      "sn": 11,
+      "model_name": "Quantity",
+      "comment": "Token quantity",
+      "null": false,
+      "type": "bigint"
+    },
+    "ctime": {
+      "sn": 15,
+      "comment": "created time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "index": [
+      [
+        "uid",
+        "ttype"
+      ],
+      [
+        "status"
+      ]
+    ]
+  },
+  "eos_tx_log": {
+    "model_name": "EosTxLog",
+    "comment": "Eos tx log",
+    "id": {
+      "sn": 1,
+      "model_name": "Id",
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned"
+    },
+    "from": {
+      "sn": 6,
+      "model_name": "From",
+      "comment": " Account",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "from_uid": {
+      "sn": 7,
+      "model_name": "FromUid",
+      "comment": " Account",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "to": {
+      "sn": 10,
+      "model_name": "To",
+      "comment": " Account",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "to_uid": {
+      "sn": 11,
+      "model_name": "ToUid",
+      "comment": " Account",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "quantity": {
+      "sn": 15,
+      "model_name": "Quantity",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "status": {
+      "sn": 18,
+      "model_name": "Status",
+      "comment": "",
+      "null": false,
+      "type": "tinyint"
+    },
+    "log_ids": {
+      "sn": 30,
+      "model_name": "LogIds",
+      "comment": "",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "ctime": {
+      "sn": 31,
+      "model_name": "Ctime",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "txid": {
+      "sn": 40,
+      "model_name": "Txid",
+      "comment": "Transaction id",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "order_id": {
+      "sn": 41,
+      "model_name": "OrderId",
+      "comment": "",
+      "null": false,
+      "type": "bigint unsigned",
+      "size": 100
+    },
+    "utime": {
+      "sn": 42,
+      "model_name": "Utime",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "sign": {
+      "sn": 43,
+      "model_name": "Sign",
+      "comment": "",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "default": ""
+    },
+    "delay_deal": {
+      "sn": 44,
+      "model_name": "DelayDeal",
+      "comment": "",
+      "null": false,
+      "type": "bool",
+      "default": false
+    },
+    "retry": {
+      "sn": 45,
+      "model_name": "Retry",
+      "comment": "",
+      "null": false,
+      "type": "int",
+      "default": 0
+    },
+    "memo": {
+      "sn": 50,
+      "model_name": "Memo",
+      "comment": "",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "default": ""
+    },
+    "index": [
+      [
+        "status"
+      ]
+    ]
+  },
+  "eusd_retire": {
+    "model_name": "EusdRetire",
+    "comment": "Eusd Retire",
+    "id": {
+      "sn": 1,
+      "model_name": "Id",
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned"
+    },
+    "from": {
+      "sn": 6,
+      "model_name": "From",
+      "comment": " Account",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "from_uid": {
+      "sn": 7,
+      "model_name": "FromUid",
+      "comment": " Account",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "quantity": {
+      "sn": 15,
+      "model_name": "Quantity",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "status": {
+      "sn": 18,
+      "model_name": "Status",
+      "comment": "",
+      "null": false,
+      "type": "tinyint"
+    },
+    "ctime": {
+      "sn": 31,
+      "model_name": "Ctime",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    }
+  },
+  "platform_user_cate": {
+    "model_name": "PlatformUserCate",
+    "comment": "",
+    "id": {
+      "sn": 1,
+      "model_name": "Id",
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int"
+    },
+    "name": {
+      "sn": 6,
+      "model_name": "Name",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "dividend": {
+      "sn": 10,
+      "model_name": "Dividend",
+      "null": false,
+      "type": "int"
+    },
+    "ctime": {
+      "sn": 31,
+      "model_name": "Ctime",
+      "null": false,
+      "type": "int unsigned"
+    }
+  },
+  "platform_user": {
+    "model_name": "PlatformUser",
+    "uid": {
+      "sn": 1,
+      "model_name": "Uid",
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned"
+    },
+    "pid": {
+      "sn": 6,
+      "model_name": "Pid",
+      "null": false,
+      "type": "int"
+    },
+    "status": {
+      "sn": 18,
+      "model_name": "Status",
+      "comment": "",
+      "null": false,
+      "type": "tinyint"
+    },
+    "ctime": {
+      "sn": 31,
+      "model_name": "Ctime",
+      "null": false,
+      "type": "int unsigned"
+    },
+    "index": [
+      [
+        "pid",
+        "uid"
+      ]
+    ]
+  }
+}

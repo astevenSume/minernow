@@ -1,0 +1,485 @@
+{
+  "game_user": {
+    "model_name": "GameUser",
+    "comment": "game user table",
+    "uid": {
+      "sn": 1,
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "channel_id": {
+      "sn": 2,
+      "comment": "game channel id",
+      "pk": true,
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "ChannelId"
+    },
+    "account": {
+      "sn": 3,
+      "comment": "account",
+      "null": false,
+      "type": "varchar",
+      "size": 50,
+      "model_name": "Account"
+    },
+    "nick_name": {
+      "sn": 4,
+      "comment": "nick name",
+      "null": false,
+      "type": "varchar",
+      "size": 50,
+      "model_name": "NickName"
+    },
+    "sex": {
+      "sn": 5,
+      "comment": "sex",
+      "null": false,
+      "type": "tinyint unsigned",
+      "model_name": "Sex"
+    },
+    "password": {
+      "sn": 6,
+      "comment": "password",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Password"
+    },
+    "ctime": {
+      "sn": 7,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "mtime": {
+      "sn": 8,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Mtime"
+    },
+    "status": {
+      "sn": 9,
+      "comment": "",
+      "null": false,
+      "type": "tinyint unsigned",
+      "model_name": "Status"
+    },
+    "index": [
+      [
+        "channel_id",
+        "account"
+      ]
+    ]
+  },
+  "game_user_daily": {
+    "model_name": "GameUserDaily",
+    "comment": "game user daily table",
+    "channel_id": {
+      "sn": 1,
+      "comment": "game channel id",
+      "pk": true,
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "ChannelId"
+    },
+    "uid": {
+      "sn": 2,
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "tax_integer": {
+      "sn": 3,
+      "comment": "tax amount integer part",
+      "type": "int",
+      "model_name": "TaxInteger"
+    },
+    "tax_decimals": {
+      "sn": 4,
+      "comment": "tax amount decimals part",
+      "type": "int",
+      "model_name": "TaxDecimals"
+    },
+    "chips_integer": {
+      "sn": 5,
+      "comment": "chips amount integer part",
+      "type": "int",
+      "model_name": "ChipsInteger"
+    },
+    "chips_decimals": {
+      "sn": 6,
+      "comment": "chips amount decimals part",
+      "type": "int",
+      "model_name": "ChipsDecimals"
+    },
+    "winlose_integer": {
+      "sn": 7,
+      "comment": "winlose amount integer part",
+      "type": "int",
+      "model_name": "WinloseInteger"
+    },
+    "winlose_decimals": {
+      "sn": 8,
+      "comment": "winlose amount decimals part",
+      "type": "int",
+      "model_name": "WinloseDecimals"
+    },
+    "ctime": {
+      "sn": 10,
+      "comment": "created time, equals to the begin time of the day",
+      "pk": true,
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "mtime": {
+      "sn": 11,
+      "comment": "modified time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Mtime"
+    }
+  },
+  "game_transfer": {
+    "model_name": "GameTransfer",
+    "comment": "game user table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "uid": {
+      "sn": 2,
+      "comment": "user id",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "channel_id": {
+      "sn": 3,
+      "comment": "game channel id",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "ChannelId"
+    },
+    "account": {
+      "sn": 4,
+      "comment": "account",
+      "null": false,
+      "type": "varchar",
+      "size": 50,
+      "model_name": "Account"
+    },
+    "transfer_type": {
+      "sn": 5,
+      "comment": "transfer type",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "TransferType"
+    },
+    "order": {
+      "sn": 6,
+      "comment": "Order",
+      "null": false,
+      "type": "varchar",
+      "size": 50,
+      "model_name": "Order"
+    },
+    "game_order": {
+      "sn": 7,
+      "comment": "Game Order",
+      "null": false,
+      "type": "varchar",
+      "size": 50,
+      "model_name": "GameOrder"
+    },
+    "coin_integer": {
+      "sn": 17,
+      "comment": "coin integer part",
+      "type": "bigint",
+      "model_name": "CoinInteger"
+    },
+    "eusd_integer": {
+      "sn": 18,
+      "comment": "eusd integer part",
+      "type": "bigint",
+      "model_name": "EusdInteger"
+    },
+    "status": {
+      "sn": 19,
+      "comment": "status",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "Status"
+    },
+    "ctime": {
+      "sn": 20,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "desc": {
+      "sn": 21,
+      "comment": "",
+      "type": "varchar",
+      "size": 512,
+      "model_name": "Desc"
+    },
+    "step": {
+      "sn": 22,
+      "comment": "",
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Step"
+    }
+  },
+  "channel_daily": {
+    "model_name": "ChannelDaily",
+    "comment": "channel daily table",
+    "channel_id": {
+      "sn": 1,
+      "comment": "channel id",
+      "pk": true,
+      "type": "int unsigned",
+      "model_name": "ChannelId"
+    },
+    "ctime": {
+      "sn": 2,
+      "comment": "create time",
+      "pk": true,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "win_lose_money_integer": {
+      "sn": 3,
+      "comment": "win lose money amount integer part",
+      "type": "int",
+      "model_name": "WinLoseMoneyInteger"
+    },
+    "win_lose_money_decimals": {
+      "sn": 4,
+      "comment": "win lose money amount decimals part",
+      "type": "int",
+      "model_name": "WinLoseMoneyDecimals"
+    },
+    "chips_integer": {
+      "sn": 5,
+      "comment": "chips amount integer part",
+      "type": "int",
+      "model_name": "ChipsInteger"
+    },
+    "chips_decimals": {
+      "sn": 6,
+      "comment": "chips amount decimals part",
+      "type": "int",
+      "model_name": "ChipsDecimals"
+    },
+    "mtime": {
+      "sn": 7,
+      "comment": "modified time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Mtime"
+    }
+  },
+  "game_log": {
+    "model_name": "GameLog",
+    "comment": "game log table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "uid": {
+      "sn": 2,
+      "comment": "user id",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "channel_id": {
+      "sn": 3,
+      "comment": "game channel id",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "ChannelId"
+    },
+    "account": {
+      "sn": 4,
+      "comment": "account",
+      "null": false,
+      "type": "varchar",
+      "size": 50,
+      "model_name": "Account"
+    },
+    "log_type": {
+      "sn": 5,
+      "comment": "log type",
+      "null": false,
+      "type": "tinyint unsigned",
+      "model_name": "LogType"
+    },
+    "desc": {
+      "sn": 6,
+      "comment": "",
+      "type": "varchar",
+      "size": 512,
+      "model_name": "Desc"
+    },
+    "ctime": {
+      "sn": 7,
+      "comment": "create time",
+      "pk": true,
+      "type": "bigint",
+      "model_name": "Ctime"
+    }
+  },
+  "game_risk_alert":{
+    "model_name":"GameRiskAlert",
+    "comment":"game risk alert table",
+    "id":{
+      "sn":1,
+      "comment":"id",
+      "pk":true,
+      "auto":true,
+      "type":"bigint unsigned",
+      "model_name":"Id"
+    },
+    "uid":{
+      "sn":2,
+      "comment":"user id",
+      "null":false,
+      "type":"bigint unsigned",
+      "model_name":"Uid"
+    },
+    "funds":{
+      "sn":3,
+      "comment":"rmb num",
+      "null":false,
+      "type":"bigint",
+      "model_name":"Funds"
+    },
+    "eusd_num":{
+      "sn":4,
+      "comment":"withdraw euse num",
+      "null":false,
+      "type":"bigint",
+      "model_name":"EusdNum"
+    },
+    "order_time":{
+      "sn":5,
+      "comment":"order time",
+      "null":false,
+      "type":"bigint unsigned",
+      "model_name":"OrderTime"
+    },
+    "alert_time":{
+      "sn":6,
+      "comment":"alert risk time",
+      "null":false,
+      "type":"bigint unsigned",
+      "model_name":"AlertTime"
+    },
+    "do_get":{
+      "sn":7,
+      "comment":"weather get risk",
+      "null":false,
+      "type":"tinyint unsigned",
+      "model_name":"DoGet"
+    },
+    "warn_grade":{
+      "sn":8,
+      "comment":"warn grade",
+      "null":false,
+      "type":"tinyint unsigned",
+      "model_name":"WarnGrade"
+    },
+    "risk_type":{
+      "sn":9,
+      "comment":"risk type",
+      "null":false,
+      "type":"tinyint unsigned",
+      "model_name":"RiskType"
+    },
+    "order_risk_id":{
+      "sn":10,
+      "comment":"order risk id",
+      "null":false,
+      "type":"bigint unsigned",
+      "model_name":"OrderRiskId"
+    }
+  },"game_order_risk":{
+  "model_name":"GameOrderRisk",
+  "comment":"game order risk table",
+  "id":{
+    "sn":1,
+    "comment":"id",
+    "pk":true,
+    "auto":true,
+    "type":"bigint unsigned",
+    "model_name":"Id"
+  },"alert_id":{
+    "sn":2,
+    "comment":"group alert id",
+    "null":false,
+    "type":"bigint",
+    "model_name":"AlertId"
+  },"uid":{
+    "sn":3,
+    "comment":"user id",
+    "null":false,
+    "type":"bigint unsigned",
+    "model_name":"Uid"
+  },"amount":{
+    "sn":4,
+    "comment":"eusd nums",
+    "null":false,
+    "type":"bigint",
+    "model_name":"Amount"
+  },"funds":{
+    "sn":5,
+    "comment":"rmb",
+    "null":false,
+    "type":"bigint",
+    "model_name":"Fund"
+  },"pay_type":{
+    "sn":6,
+    "comment":"pay type",
+    "null":false,
+    "type":"tinyint",
+    "model_name":"PayType"
+  },"pay_account":{
+    "sn":7,
+    "comment":"pay account",
+    "null":false,
+    "type":"varchar",
+    "size": 300,
+    "model_name":"PayAccount"
+  },"order_time":{
+    "sn":8,
+    "comment":"order time",
+    "null":false,
+    "type":"bigint",
+    "model_name":"OrderTime"
+  },"ctime":{
+    "sn":9,
+    "comment":"ctime",
+    "null":false,
+    "type":"bigint",
+    "model_name":"Ctime"
+  }
+}
+}

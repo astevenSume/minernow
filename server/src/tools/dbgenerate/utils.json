@@ -1,0 +1,47 @@
+{
+  "token": {
+    "comment": "access token table",
+    "uid": {
+      "sn": 1,
+      "comment": "user id",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid",
+      "pk": true
+    },
+    "client_type": {
+      "sn": 2,
+      "comment": "app type",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "ClientType",
+      "pk": true
+    },
+    "mtime": {
+      "sn": 3,
+      "comment": "access_token modify time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "MTime"
+    },
+    "access_token": {
+      "sn": 4,
+      "comment": "access_token",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "AccessToken"
+    },
+    "mac": {
+      "sn": 5,
+      "comment": "",
+      "pk": true,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Mac"
+    },
+    "index": [],
+    "model_name": "Token"
+  }
+}

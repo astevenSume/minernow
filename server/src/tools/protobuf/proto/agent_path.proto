@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package pb;
+
+// AgentPath
+message AgentPath{
+    uint64 PUId = 1; //上级uid
+    uint32 Level = 2; //自己等级
+    repeated uint64 SubUid = 3;//下级uid
+}

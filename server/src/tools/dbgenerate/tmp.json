@@ -1,0 +1,53 @@
+{
+  "tmp_game_beters":{
+    "model_name":"TmpGamebeters",
+    "comment":"new player who is not betted",
+    "uid":{
+      "sn":1,
+      "comment":"user id",
+      "pk": true,
+      "null":false,
+      "type":"bigint unsigned",
+      "model_name":"Uid"
+    },
+    "channel_id":{
+      "sn":2,
+      "comment":"channel id",
+      "null":false,
+      "type":"int unsigned",
+      "model_name":"ChannelId"
+    },
+    "game_id":{
+      "sn":3,
+      "comment":"game id",
+      "pk": true,
+      "null":false,
+      "type":"int unsigned",
+      "model_name":"GameId"
+    },
+    "ctime":{
+      "sn":4,
+      "comment":"create time",
+      "pk": true,
+      "null":false,
+      "type":"bigint",
+      "model_name":"Ctime"
+    },
+    "status":{
+      "sn":5,
+      "comment":"status",
+      "null":false,
+      "type":"char",
+      "size":20,
+      "default":"",
+      "model_name":"Status"
+    },
+    "bet_type":{
+      "sn":6,
+      "comment":"bet type",
+      "null":false,
+      "type":"int unsigned",
+      "model_name":"BetType"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+| 错误码 | 描述 | 备注 |
+| :------ | :------ | :------ |	
+| 0 | UNKNOWN | zh : 未知错误<br> |
+| 1 | DB | zh : 数据库操作错误<br> |
+| 2 | PARAM_FAILED | zh : 获取参数失败<br> |
+| 3 | NO_SYSMSG | zh : 未匹配到该id的系统消息<br> |
+| 4 | DEL_FAIL | zh : 数据库删除失败<br> |
+| 5 | UPDATE_FAIL | zh : 数据库更新失败<br> |
+| 6 | SIGN_FAIL | zh : 签名失败<br> |
+| 7 | OTC_REQ_FAIL | zh : otc请求失败<br> |
+| 8 | GEN_GOOGLE_AUTH_FAIL | zh : google验证生成失败<br> |
+| 9 | RABBIT_MQ_PUBLISH_FAIL | zh : rabbitmq发送消息失败<br> |
+| 10 | ENCODE_FAIL | zh : 编码失败<br> |
+| 11 | DECODE_FAIL | zh : 解码失败<br> |
+| 200 | SUCCESS |  |
+| 201 | NO_LOGIN | zh : 请先登录<br> |
+| 202 | PARAMS_ERROR | zh : 参数错误<br> |
+| 203 | NO_USER | zh : 用户不存在<br> |
+| 204 | CAPTCHA_ERR | zh : 验证码错误<br> |
+| 205 | TOKEN_ERR | zh : Token生成失败<br> |
+| 206 | PWD_ERROR | zh : 密码错误<br> |
+| 207 | DB_NO_DATA | zh : 没有权限<br> |
+| 208 | USER_NAME_ERROR | zh : 请输入合法的用户名<br> |
+| 209 | USER_NO_ACTIVE | zh : 用户未激活<br> |
+| 210 | ID_EXSIT | zh : ID已存在<br> |
+| 211 | TOKEN_VERIFY_ERR | zh : 登录TOKEN验证失败，请重新登录<br> |
+| 212 | MOBILE_EXSIT | zh : 手机号已存在<br> |
+| 213 | MOBILE_REGISTERED | zh : 手机号已在列表或者已注册,不能修改<br> |
+| 214 | COMMISSION_DISTRIBUTE_FAIL | zh : 佣金发放失败<br> |
+| 215 | APPEAL_SERVICE_LESS | zh : 请保证至少启用一个申诉客服<br> |
+| 216 | CANCEL_ORDER_FAIL | zh : 取消订单失败<br> |
+| 217 | CONFIRM_ORDER_FAIL | zh : 确认订单失败<br> |
+| 218 | EXIST_WHITE_LIST_AGENT | zh : 已有档位,不能添加<br> |
+| 219 | OTC_FAIL | zh : OTC处理失败<br> |
+| 220 | OTC_ORDER_STATUS_ERR | zh : 订单状态异常<br> |
+| 221 | OTC_ORDER_APPEAL_RESOLVED | zh : 申述已解决,请不要重复操作<br> |
+| 222 | VERITY_GOOGLE_CODE_FAIL | zh : 验证码错误,请同步手机时间后重新输入<br> |
+| 223 | SMS_NO_SUPPORT_CHINA_MOBILE | zh : 不支持国内手机号发送<br> |
+| 224 | HAS_LOWER_LEVEL | zh : 只能删除最低等级的配置<br> |
+| 403 | NO_RIGHT_ERROR | zh : 没有权限<br> |
+| 600 | TASK_NO_EXIST_ERROR | zh : 定时任务不存在<br> |
+| 601 | TASK_STATUS_ERROR | zh : 定时任务状态错误<br> |
+| 602 | TASK_APPNAME_DIFFERENT_ERROR | zh : 定时任务AppName不一致<br> |
+| 1001 | USER_REGISTERED | zh : Email用户已存在<br> |
+| 1002 | RISK_ALERT | zh : 游戏风险报警<br> |
+| 1003 | GAME_REPORT_CAL | zh : 游戏报告错误计算<br> |
+| 1004 | GAME_DATA_HASED | zh : 今日数据已生成过<br> |

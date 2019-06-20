@@ -1,0 +1,962 @@
+{
+  "usdt_account": {
+    "model_name": "UsdtAccount",
+    "comment": "usdt account table",
+    "uaid": {
+      "sn": 1,
+      "comment": "",
+      "pk": true,
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Uaid"
+    },
+    "uid": {
+      "sn": 2,
+      "comment": "",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "status": {
+      "sn": 3,
+      "comment": "status 0-locked 1-working",
+      "null": false,
+      "type": "tinyint unsigned",
+      "model_name": "Status"
+    },
+    "available_integer": {
+      "sn": 4,
+      "comment": "available amount integer part",
+      "type": "bigint",
+      "model_name": "AvailableInteger"
+    },
+    "frozen_integer": {
+      "sn": 5,
+      "comment": "frozen amount integer part",
+      "type": "bigint",
+      "model_name": "FrozenInteger"
+    },
+    "transfer_frozen_integer": {
+      "sn": 6,
+      "comment": "frozen amount integer part",
+      "type": "bigint",
+      "model_name": "TransferFrozenInteger"
+    },
+    "mortgaged_integer": {
+      "sn": 7,
+      "comment": "mortgaged amount integer part",
+      "type": "bigint",
+      "model_name": "MortgagedInteger"
+    },
+    "btc_available_integer": {
+      "sn": 8,
+      "comment": "available btc amount integer part",
+      "type": "bigint",
+      "model_name": "BtcAvailableInteger"
+    },
+    "btc_frozen_integer": {
+      "sn": 9,
+      "comment": "frozen btc amount integer part",
+      "type": "bigint",
+      "model_name": "BtcFrozenInteger"
+    },
+    "btc_mortgaged_integer": {
+      "sn": 10,
+      "comment": "mortgaged btc amount integer part",
+      "type": "bigint",
+      "model_name": "BtcMortgagedInteger"
+    },
+    "waiting_cash_sweep_integer": {
+      "sn": 11,
+      "model_name": "WaitingCashSweepInteger",
+      "comment": "waiting cash sweep integer part",
+      "null": false,
+      "type": "bigint"
+    },
+    "cash_sweep_integer": {
+      "sn": 12,
+      "model_name": "CashSweepInteger",
+      "comment": "cash sweep integer part",
+      "null": false,
+      "type": "bigint"
+    },
+    "owned_by_platform_integer": {
+      "sn": 13,
+      "model_name": "OwnedByPlatformInteger",
+      "comment": "owned by platform integer part",
+      "null": false,
+      "type": "bigint"
+    },
+    "sweep_status": {
+      "sn": 14,
+      "comment": "sweep status",
+      "null": false,
+      "type": "tinyint unsigned",
+      "model_name": "SweepStatus"
+    },
+    "pkid": {
+      "sn": 15,
+      "model_name": "Pkid",
+      "comment": "usdt private key id",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "address": {
+      "sn": 16,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Address"
+    },
+    "ctime": {
+      "sn": 17,
+      "comment": "created time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "mtime": {
+      "sn": 18,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Mtime"
+    },
+    "sign": {
+      "sn": 19,
+      "comment": "sign",
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Sign"
+    },
+    "index": [
+      [
+        "uid"
+      ],
+      [
+        "pkid"
+      ]
+    ]
+  },
+  "usdt_prikey": {
+    "model_name": "PriKey",
+    "comment": "",
+    "pkid": {
+      "sn": 1,
+      "comment": "",
+      "pk": true,
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Pkid"
+    },
+    "pri": {
+      "sn": 2,
+      "comment": "",
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Pri"
+    },
+    "address": {
+      "sn": 3,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Address"
+    },
+    "index": [],
+    "unique index": [
+      [
+        "pri"
+      ],
+      [
+        "address"
+      ]
+    ]
+  },
+  "usdt_onchain_log": {
+    "model_name": "UsdtOnchainLog",
+    "comment": "the log of tx on chain",
+    "oclid": {
+      "sn": 1,
+      "comment": "",
+      "pk": true,
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Oclid"
+    },
+    "from": {
+      "sn": 2,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "From"
+    },
+    "to": {
+      "sn": 3,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "To"
+    },
+    "tx": {
+      "sn": 4,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Tx"
+    },
+    "status": {
+      "sn": 5,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Status"
+    },
+    "pushed": {
+      "sn": 6,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Pushed"
+    },
+    "signedTx": {
+      "sn": 7,
+      "comment": "",
+      "type": "text",
+      "model_name": "SignedTx"
+    },
+    "amount_integer": {
+      "sn": 8,
+      "comment": "amount integer part",
+      "type": "bigint",
+      "model_name": "AmountInteger"
+    },
+    "ctime": {
+      "sn": 9,
+      "comment": "created time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "index": [
+      [
+        "from"
+      ],
+      [
+        "to"
+      ],
+      [
+        "ctime"
+      ]
+    ]
+  },
+  "usdt_onchain_transaction": {
+    "model_name": "UsdtOnchainTransaction",
+    "comment": "the tx on chain",
+    "tx_id": {
+      "sn": 1,
+      "comment": "",
+      "pk": true,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "TxId"
+    },
+    "uaid": {
+      "sn": 2,
+      "model_name": "Uaid",
+      "comment": "usdt account id",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "type": {
+      "sn": 3,
+      "model_name": "Type",
+      "comment": "Transaction type",
+      "null": false,
+      "type": "tinyint unsigned"
+    },
+    "property_id": {
+      "sn": 4,
+      "comment": "",
+      "pk": true,
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "PropertyId"
+    },
+    "property_name": {
+      "sn": 5,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "PropertyName"
+    },
+    "tx_type": {
+      "sn": 6,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "TxType"
+    },
+    "tx_type_int": {
+      "sn": 7,
+      "comment": "",
+      "type": "int",
+      "model_name": "TxTypeInt"
+    },
+    "amount_integer": {
+      "sn": 8,
+      "comment": "amount integer part",
+      "type": "bigint",
+      "model_name": "AmountInteger"
+    },
+    "block": {
+      "sn": 9,
+      "comment": "",
+      "type": "int unsigned",
+      "model_name": "Block"
+    },
+    "block_hash": {
+      "sn": 10,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "BlockHash"
+    },
+    "block_time": {
+      "sn": 11,
+      "comment": "",
+      "type": "bigint",
+      "model_name": "BlockTime"
+    },
+    "confirmations": {
+      "sn": 12,
+      "comment": "",
+      "type": "int unsigned",
+      "model_name": "Confirmations"
+    },
+    "divisible": {
+      "sn": 13,
+      "comment": "",
+      "type": "bool",
+      "model_name": "Divisible"
+    },
+    "fee_amount_integer": {
+      "sn": 14,
+      "comment": "fee amount integer part",
+      "type": "bigint",
+      "model_name": "FeeAmountInteger"
+    },
+    "is_mine": {
+      "sn": 15,
+      "comment": "",
+      "type": "bool",
+      "model_name": "IsMine"
+    },
+    "position_in_block": {
+      "sn": 16,
+      "comment": "",
+      "type": "int unsigned",
+      "model_name": "PositionInBlock"
+    },
+    "referenceaddress": {
+      "sn": 17,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "ReferenceAddress"
+    },
+    "sending_address": {
+      "sn": 18,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "SendingAddress"
+    },
+    "version": {
+      "sn": 19,
+      "comment": "",
+      "type": "int",
+      "model_name": "Version"
+    },
+    "mtime": {
+      "sn": 20,
+      "comment": "",
+      "type": "bigint",
+      "model_name": "Mtime"
+    },
+    "index": [
+      [
+        "uaid",
+        "type"
+      ]
+    ]
+  },
+  "usdt_onchain_balance": {
+    "model_name": "UsdtOnchainBalance",
+    "comment": "the balance on chain",
+    "address": {
+      "sn": 1,
+      "comment": "",
+      "type": "varchar",
+      "pk": true,
+      "null": false,
+      "size": 100,
+      "model_name": "Address"
+    },
+    "property_id": {
+      "sn": 2,
+      "comment": "",
+      "pk": true,
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "PropertyId"
+    },
+    "pending_pos": {
+      "sn": 3,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "PendingPos"
+    },
+    "reserved": {
+      "sn": 4,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Reserved"
+    },
+    "divisible": {
+      "sn": 5,
+      "comment": "",
+      "type": "bool",
+      "model_name": "Divisible"
+    },
+    "amount_integer": {
+      "sn": 6,
+      "comment": "amount integer part",
+      "type": "bigint",
+      "model_name": "AmountInteger"
+    },
+    "frozen": {
+      "sn": 7,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Frozen"
+    },
+    "pending_neg": {
+      "sn": 8,
+      "comment": "",
+      "type": "varchar",
+      "size": 100,
+      "model_name": "PendingNeg"
+    },
+    "mtime": {
+      "sn": 9,
+      "comment": "",
+      "type": "bigint",
+      "model_name": "Mtime"
+    },
+    "index": []
+  },
+  "usdt_onchain_data": {
+    "model_name": "UsdtOnChainData",
+    "comment": "configurations of usdt on chain.",
+    "address": {
+      "sn": 1,
+      "comment": "",
+      "type": "varchar",
+      "pk": true,
+      "null": false,
+      "size": 100,
+      "model_name": "Address"
+    },
+    "attr_type": {
+      "sn": 2,
+      "comment": "",
+      "pk": true,
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "AttrType"
+    },
+    "data_int64": {
+      "sn": 3,
+      "comment": "",
+      "type": "bigint",
+      "model_name": "DataInt64"
+    },
+    "data_str": {
+      "sn": 4,
+      "comment": "",
+      "type": "varchar",
+      "size": 256,
+      "model_name": "DataStr"
+    }
+  },
+  "usdt_onchain_sync_pos": {
+    "model_name": "UsdtOnChainSyncPos",
+    "comment": "configurations of usdt on chain.",
+    "address": {
+      "sn": 1,
+      "comment": "",
+      "type": "varchar",
+      "pk": true,
+      "null": false,
+      "size": 100,
+      "model_name": "Address"
+    },
+    "page": {
+      "sn": 2,
+      "comment": "",
+      "type": "int unsigned",
+      "model_name": "Page"
+    },
+    "tx_id": {
+      "sn": 3,
+      "comment": "",
+      "type": "varchar",
+      "size": 128,
+      "model_name": "TxId"
+    }
+  },
+  "usdt_wealth_log": {
+    "model_name": "UsdtWealthLog",
+    "comment": "Usdt wealth log",
+    "id": {
+      "sn": 1,
+      "model_name": "Id",
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "uid": {
+      "sn": 2,
+      "model_name": "Uid",
+      "comment": "uid",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "ttype": {
+      "sn": 3,
+      "model_name": "TType",
+      "comment": "Transaction type",
+      "null": false,
+      "type": "int unsigned"
+    },
+    "status": {
+      "sn": 4,
+      "comment": "Transaction status",
+      "type": "int unsigned",
+      "model_name": "Status"
+    },
+    "from": {
+      "sn": 5,
+      "model_name": "From",
+      "comment": "sender address",
+      "null": false,
+      "type": "varchar",
+      "size": 256
+    },
+    "to": {
+      "sn": 6,
+      "model_name": "To",
+      "comment": "receiver address",
+      "null": false,
+      "type": "varchar",
+      "size": 256
+    },
+    "txid": {
+      "sn": 7,
+      "model_name": "Txid",
+      "comment": "Transaction id",
+      "null": false,
+      "type": "varchar",
+      "size": 256
+    },
+    "amount_integer": {
+      "sn": 8,
+      "comment": "amount integer",
+      "type": "bigint",
+      "model_name": "AmountInteger"
+    },
+    "fee_integer": {
+      "sn": 9,
+      "comment": "fee integer",
+      "type": "bigint",
+      "model_name": "FeeInteger"
+    },
+    "fee_usdt_integer": {
+      "sn": 10,
+      "comment": "fee usdt integer",
+      "type": "bigint",
+      "model_name": "FeeUsdtInteger"
+    },
+    "fee_onchain_integer": {
+      "sn": 11,
+      "comment": "fee onchain",
+      "type": "bigint",
+      "model_name": "FeeOnchainInteger"
+    },
+    "ctime": {
+      "sn": 12,
+      "comment": "created time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 13,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Utime"
+    },
+    "step": {
+      "sn": 14,
+      "comment": "desc",
+      "type": "varchar",
+      "size": 64,
+      "model_name": "Step"
+    },
+    "desc": {
+      "sn": 15,
+      "comment": "desc",
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Desc"
+    },
+    "sign": {
+      "sn": 16,
+      "comment": "sign",
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Sign"
+    },
+    "memo": {
+      "sn": 17,
+      "comment": "memo",
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Memo"
+    },
+    "index": [
+      [
+        "uid",
+        "ttype"
+      ],
+      [
+        "txid"
+      ],
+      [
+        "ctime"
+      ]
+    ]
+  },
+  "usdt_sweep_log": {
+    "model_name": "UsdtSweepLog",
+    "comment": "Usdt sweep log",
+    "id": {
+      "sn": 1,
+      "model_name": "Id",
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "uid": {
+      "sn": 2,
+      "model_name": "Uid",
+      "comment": "uid",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "ttype": {
+      "sn": 3,
+      "model_name": "TType",
+      "comment": "Transaction type",
+      "null": false,
+      "type": "int unsigned"
+    },
+    "status": {
+      "sn": 4,
+      "comment": "Transaction status",
+      "type": "int unsigned",
+      "model_name": "Status"
+    },
+    "from": {
+      "sn": 5,
+      "model_name": "From",
+      "comment": "sender address",
+      "null": false,
+      "type": "varchar",
+      "size": 256
+    },
+    "to": {
+      "sn": 6,
+      "model_name": "To",
+      "comment": "receiver address",
+      "null": false,
+      "type": "varchar",
+      "size": 256
+    },
+    "txid": {
+      "sn": 7,
+      "model_name": "Txid",
+      "comment": "Transaction id",
+      "null": false,
+      "type": "varchar",
+      "size": 256
+    },
+    "amount_integer": {
+      "sn": 8,
+      "comment": "amount integer",
+      "type": "bigint",
+      "model_name": "AmountInteger"
+    },
+    "fee_integer": {
+      "sn": 9,
+      "comment": "fee integer",
+      "type": "bigint",
+      "model_name": "FeeInteger"
+    },
+    "fee_onchain_integer": {
+      "sn": 10,
+      "comment": "fee onchain",
+      "type": "bigint",
+      "model_name": "FeeOnchainInteger"
+    },
+    "ctime": {
+      "sn": 11,
+      "comment": "created time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 12,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Utime"
+    },
+    "step": {
+      "sn": 13,
+      "comment": "desc",
+      "type": "varchar",
+      "size": 64,
+      "model_name": "Step"
+    },
+    "desc": {
+      "sn": 14,
+      "comment": "desc",
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Desc"
+    },
+    "index": [
+      [
+        "uid",
+        "ttype"
+      ],
+      [
+        "txid"
+      ]
+    ]
+  },
+  "usdt_transaction": {
+    "model_name": "UsdtTransaction",
+    "comment": "Usdt Transaction",
+    "tx_id": {
+      "sn": 1,
+      "comment": "",
+      "pk": true,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "TxId"
+    },
+    "uaid": {
+      "sn": 2,
+      "model_name": "Uaid",
+      "comment": "usdt account id",
+      "pk": true,
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "type": {
+      "sn": 3,
+      "model_name": "Type",
+      "comment": "Transaction type",
+      "null": false,
+      "type": "tinyint unsigned"
+    },
+    "block_num": {
+      "sn": 4,
+      "model_name": "BlockNum",
+      "comment": "block num",
+      "null": false,
+      "type": "int unsigned"
+    },
+    "status": {
+      "sn": 5,
+      "model_name": "Status",
+      "comment": "Transaction status",
+      "null": false,
+      "type": "int"
+    },
+    "payer": {
+      "sn": 6,
+      "model_name": "Payer",
+      "comment": "Payer Account",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "receiver": {
+      "sn": 7,
+      "model_name": "Receiver",
+      "comment": "Receiver Account",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "amount_integer": {
+      "sn": 8,
+      "comment": "amount integer part",
+      "type": "bigint",
+      "model_name": "AmountInteger"
+    },
+    "fee": {
+      "sn": 9,
+      "model_name": "Fee",
+      "comment": "transaction Fee",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "memo": {
+      "sn": 10,
+      "model_name": "Memo",
+      "comment": "transaction memo",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "ctime": {
+      "sn": 11,
+      "comment": "created time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 12,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Utime"
+    },
+    "index": [
+      [
+        "uaid",
+        "type"
+      ]
+    ]
+  },
+  "prices": {
+    "model_name": "Prices",
+    "comment": "system otc ex price",
+    "id": {
+      "sn": 1,
+      "comment": "otc price record id",
+      "pk": true,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "currency": {
+      "sn": 2,
+      "comment": "currency",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Currency"
+    },
+    "pow_price": {
+      "sn": 3,
+      "comment": "pow price",
+      "type": "bigint unsigned",
+      "model_name": "PowPrice"
+    },
+    "pow": {
+      "sn": 4,
+      "comment": "pow_price = (real price) * pow",
+      "type": "int",
+      "model_name": "Pow",
+      "default": 4
+    },
+    "ctime": {
+      "sn": 5,
+      "comment": "created time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    }
+  },
+  "market_prices": {
+    "model_name": "MarketPrices",
+    "comment": "market otc ex price",
+    "id": {
+      "sn": 1,
+      "comment": "market otc price record id",
+      "pk": true,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "market": {
+      "sn": 2,
+      "comment": "market",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Market"
+    },
+    "currency": {
+      "sn": 3,
+      "comment": "currency",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Currency"
+    },
+    "trade_method": {
+      "sn": 4,
+      "model_name": "TradeMethod",
+      "comment": "trade method",
+      "null": false,
+      "type": "tinyint"
+    },
+    "pow_price": {
+      "sn": 5,
+      "comment": "pow price",
+      "type": "bigint unsigned",
+      "model_name": "PowPrice"
+    },
+    "pow": {
+      "sn": 6,
+      "comment": "pow_price = (real price) * pow",
+      "type": "int",
+      "model_name": "Pow",
+      "default": 4
+    },
+    "ctime": {
+      "sn": 8,
+      "comment": "created time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    }
+  }
+}

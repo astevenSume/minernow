@@ -1,0 +1,1482 @@
+{
+  "user": {
+    "model_name": "User",
+    "comment": "user table",
+    "uid": {
+      "sn": 1,
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "national_code": {
+      "sn": 2,
+      "comment": "national_code",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "NationalCode"
+    },
+    "mobile": {
+      "sn": 3,
+      "comment": "Mobile",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Mobile"
+    },
+    "status": {
+      "sn": 4,
+      "model_name": "Status",
+      "comment": "status",
+      "null": false,
+      "type": "tinyint"
+    },
+    "nick": {
+      "sn": 5,
+      "comment": "nick",
+      "pk": false,
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Nick"
+    },
+    "pass": {
+      "sn": 6,
+      "comment": "password",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "model_name": "Password"
+    },
+    "salt": {
+      "sn": 7,
+      "comment": "salt",
+      "null": false,
+      "type": "varchar",
+      "size": 16,
+      "model_name": "Salt"
+    },
+    "ctime": {
+      "sn": 8,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 9,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Utime"
+    },
+    "ip": {
+      "sn": 10,
+      "comment": "ip",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "default": "",
+      "model_name": "Ip"
+    },
+    "last_login_time": {
+      "sn": 11,
+      "comment": "last login time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "LastLoginTime"
+    },
+    "last_login_ip": {
+      "sn": 12,
+      "comment": "last login ip",
+      "null": false,
+      "type": "varchar",
+      "size": 100,
+      "default": "",
+      "model_name": "LastLoginIp"
+    },
+    "is_exchanger": {
+      "sn": 13,
+      "model_name": "IsExchanger",
+      "comment": "last login ip",
+      "null": false,
+      "type": "tinyint",
+      "default": "0"
+    },
+    "sign_salt": {
+      "sn": 14,
+      "comment": "sign salt",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "SignSalt"
+    },
+    "unique index": [
+      [
+        "national_code",
+        "mobile"
+      ]
+    ]
+  },
+  "payment_method": {
+    "model_name": "PaymentMethod",
+    "comment": "user payment methods table",
+    "pmid": {
+      "sn": 1,
+      "comment": "payment method id",
+      "pk": true,
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Pmid"
+    },
+    "uid": {
+      "sn": 2,
+      "comment": "user id",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "mtype": {
+      "sn": 3,
+      "comment": "payment method enum",
+      "null": false,
+      "type": "tinyint unsigned",
+      "model_name": "MType"
+    },
+    "ord": {
+      "sn": 4,
+      "comment": "order serial number",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "Ord"
+    },
+    "name": {
+      "sn": 5,
+      "comment": "name",
+      "null": false,
+      "type": "varchar",
+      "size": 128,
+      "model_name": "Name"
+    },
+    "account": {
+      "sn": 6,
+      "comment": "account",
+      "null": false,
+      "type": "varchar",
+      "size": 128,
+      "model_name": "Account"
+    },
+    "status": {
+      "sn": 7,
+      "comment": "status 0-disable 1-enable ",
+      "null": false,
+      "type": "tinyint unsigned",
+      "model_name": "Status"
+    },
+    "ctime": {
+      "sn": 8,
+      "comment": "created time",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "Ctime"
+    },
+    "bank": {
+      "sn": 9,
+      "comment": "",
+      "type": "varchar",
+      "size": 128,
+      "model_name": "Bank"
+    },
+    "bank_branch": {
+      "sn": 10,
+      "comment": "",
+      "type": "varchar",
+      "size": 128,
+      "model_name": "BankBranch"
+    },
+    "qr_code": {
+      "sn": 11,
+      "comment": "",
+      "type": "varchar",
+      "size": 256,
+      "model_name": "QRCode"
+    },
+    "qr_code_content": {
+      "sn": 12,
+      "comment": "qr_code_content",
+      "type": "text",
+      "model_name": "QRCodeContent"
+    },
+    "low_money_per_tx_limit": {
+      "sn": 13,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "LowMoneyPerTxLimit"
+    },
+    "high_money_per_tx_limit": {
+      "sn": 14,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "HighMoneyPerTxLimit"
+    },
+    "times_per_day_limit": {
+      "sn": 15,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "TimesPerDayLimit"
+    },
+    "money_per_day_limit": {
+      "sn": 16,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "MoneyPerDayLimit"
+    },
+    "money_sum_limit": {
+      "sn": 17,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "MoneySumLimit"
+    },
+    "times_today": {
+      "sn": 18,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "TimesToday"
+    },
+    "money_today": {
+      "sn": 19,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "MoneyToday"
+    },
+    "money_sum": {
+      "sn": 20,
+      "comment": "",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "MoneySum"
+    },
+    "mtime": {
+      "sn": 21,
+      "comment": "modified time",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "Mtime"
+    },
+    "use_time": {
+      "sn": 22,
+      "comment": "use time",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "UseTime"
+    },
+    "index": [
+      [
+        "uid",
+        "mtype"
+      ]
+    ]
+  },
+  "otc_sell": {
+    "model_name": "OtcSell",
+    "comment": "otc_sell",
+    "uid": {
+      "sn": 1,
+      "model_name": "Uid",
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned"
+    },
+    "available": {
+      "sn": 2,
+      "model_name": "Available",
+      "comment": "available token",
+      "null": false,
+      "type": "bigint"
+    },
+    "frozen": {
+      "sn": 3,
+      "model_name": "Frozen",
+      "comment": "frozen token",
+      "null": false,
+      "type": "bigint"
+    },
+    "sold": {
+      "sn": 4,
+      "model_name": "Sold",
+      "comment": "Sold token",
+      "null": false,
+      "type": "bigint"
+    },
+    "lower_limit": {
+      "sn": 5,
+      "model_name": "LowerLimit",
+      "comment": "lower limit",
+      "null": false,
+      "type": "bigint"
+    },
+    "upper_limit": {
+      "sn": 6,
+      "model_name": "UpperLimit",
+      "comment": "upper limit",
+      "null": false,
+      "type": "bigint"
+    },
+    "pay_type": {
+      "sn": 7,
+      "model_name": "PayType",
+      "comment": "pay type",
+      "null": false,
+      "type": "tinyint unsigned"
+    },
+    "ctime": {
+      "sn": 10,
+      "model_name": "Ctime",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "index": []
+  },
+  "otc_buy": {
+    "model_name": "OtcBuy",
+    "comment": "otc_buy",
+    "uid": {
+      "sn": 1,
+      "model_name": "Uid",
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned"
+    },
+    "available": {
+      "sn": 2,
+      "model_name": "Available",
+      "comment": "available token",
+      "null": false,
+      "type": "bigint"
+    },
+    "frozen": {
+      "sn": 3,
+      "model_name": "Frozen",
+      "comment": "frozen token",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "bought": {
+      "sn": 4,
+      "model_name": "Bought",
+      "comment": "bought token",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "lower_limit_wechat": {
+      "sn": 5,
+      "model_name": "LowerLimitWechat",
+      "comment": "lower limit",
+      "null": false,
+      "type": "bigint"
+    },
+    "upper_limit_wechat": {
+      "sn": 6,
+      "model_name": "UpperLimitWechat",
+      "comment": "upper limit",
+      "null": false,
+      "type": "bigint"
+    },
+    "lower_limit_bank": {
+      "sn": 10,
+      "model_name": "LowerLimitBank",
+      "comment": "lower limit",
+      "null": false,
+      "type": "bigint"
+    },
+    "upper_limit_bank": {
+      "sn": 11,
+      "model_name": "UpperLimitBank",
+      "comment": "upper limit",
+      "null": false,
+      "type": "bigint"
+    },
+    "lower_limit_ali": {
+      "sn": 15,
+      "model_name": "LowerLimitAli",
+      "comment": "lower limit",
+      "null": false,
+      "type": "bigint"
+    },
+    "upper_limit_ali": {
+      "sn": 16,
+      "model_name": "UpperLimitAli",
+      "comment": "upper limit",
+      "null": false,
+      "type": "bigint"
+    },
+    "pay_type": {
+      "sn": 27,
+      "model_name": "PayType",
+      "comment": "pay type",
+      "null": false,
+      "type": "tinyint unsigned"
+    },
+    "ctime": {
+      "sn": 30,
+      "model_name": "Ctime",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "index": []
+  },
+  "otc_order": {
+    "model_name": "OtcOrder",
+    "comment": "otc_sell",
+    "id": {
+      "sn": 1,
+      "model_name": "Id",
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned"
+    },
+    "uid": {
+      "sn": 2,
+      "model_name": "Uid",
+      "comment": "",
+      "type": "bigint unsigned"
+    },
+    "uip": {
+      "sn": 5,
+      "model_name": "Uip",
+      "comment": "user ip",
+      "null": false,
+      "default": "",
+      "type": "varchar",
+      "size": 40
+    },
+    "euid": {
+      "sn": 6,
+      "model_name": "EUid",
+      "comment": "",
+      "null": false,
+      "default": "0",
+      "type": "bigint unsigned"
+    },
+    "eip": {
+      "sn": 7,
+      "model_name": "Eip",
+      "comment": " ip",
+      "null": false,
+      "type": "varchar",
+      "size": 40
+    },
+    "side": {
+      "sn": 8,
+      "model_name": "Side",
+      "comment": "1-buy 2-sell",
+      "null": false,
+      "type": "tinyint"
+    },
+    "amount": {
+      "sn": 9,
+      "model_name": "Amount",
+      "comment": "eusd num",
+      "null": false,
+      "type": "bigint"
+    },
+    "price": {
+      "sn": 10,
+      "model_name": "Price",
+      "comment": "eusd => rmb price",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "funds": {
+      "sn": 11,
+      "model_name": "Funds",
+      "comment": "rmb funds",
+      "null": false,
+      "type": "bigint"
+    },
+    "fee": {
+      "sn": 12,
+      "model_name": "Fee",
+      "comment": "rmb price",
+      "null": false,
+      "type": "bigint"
+    },
+    "pay_id": {
+      "sn": 15,
+      "model_name": "PayId",
+      "comment": "pay id",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "pay_type": {
+      "sn": 16,
+      "model_name": "PayType",
+      "comment": "pay type",
+      "null": false,
+      "type": "tinyint"
+    },
+    "pay_name": {
+      "sn": 17,
+      "model_name": "PayName",
+      "comment": "",
+      "null": false,
+      "type": "varchar",
+      "size": 128
+    },
+    "pay_account": {
+      "sn": 19,
+      "comment": "",
+      "type": "varchar",
+      "size": 300,
+      "model_name": "PayAccount"
+    },
+    "pay_bank": {
+      "sn": 20,
+      "comment": "",
+      "type": "varchar",
+      "size": 128,
+      "model_name": "PayBank"
+    },
+    "pay_bank_branch": {
+      "sn": 21,
+      "comment": "",
+      "type": "varchar",
+      "size": 300,
+      "model_name": "PayBankBranch"
+    },
+    "transfer_id": {
+      "sn": 25,
+      "model_name": "TransferId",
+      "comment": "",
+      "type": "bigint unsigned"
+    },
+    "ctime": {
+      "sn": 30,
+      "model_name": "Ctime",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "pay_time": {
+      "sn": 31,
+      "model_name": "PayTime",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "finish_time": {
+      "sn": 32,
+      "model_name": "FinishTime",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "utime": {
+      "sn": 33,
+      "model_name": "Utime",
+      "comment": "",
+      "null": false,
+      "type": "bigint"
+    },
+    "status": {
+      "sn": 35,
+      "model_name": "Status",
+      "comment": "",
+      "null": false,
+      "type": "tinyint"
+    },
+    "epay_id": {
+      "sn": 45,
+      "model_name": "EPayId",
+      "comment": "pay id",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "epay_type": {
+      "sn": 46,
+      "model_name": "EPayType",
+      "comment": "pay type",
+      "null": false,
+      "type": "tinyint"
+    },
+    "epay_name": {
+      "sn": 47,
+      "model_name": "EPayName",
+      "comment": "",
+      "null": false,
+      "type": "varchar",
+      "size": 128
+    },
+    "epay_account": {
+      "sn": 49,
+      "comment": "",
+      "type": "varchar",
+      "size": 300,
+      "model_name": "EPayAccount"
+    },
+    "epay_bank": {
+      "sn": 50,
+      "comment": "",
+      "type": "varchar",
+      "size": 128,
+      "model_name": "EPayBank"
+    },
+    "epay_bank_branch": {
+      "sn": 51,
+      "comment": "",
+      "type": "varchar",
+      "size": 300,
+      "model_name": "EPayBankBranch"
+    },
+    "appeal_status": {
+      "sn": 52,
+      "model_name": "AppealStatus",
+      "comment": "",
+      "default": 0,
+      "null": false,
+      "type": "tinyint"
+    },
+    "admin_id": {
+      "sn": 53,
+      "model_name": "AdminId",
+      "comment": "",
+      "default": 0,
+      "null": false,
+      "type": "int unsigned"
+    },
+    "qr_code": {
+      "sn": 54,
+      "comment": "",
+      "type": "varchar",
+      "size": 300,
+      "model_name": "QrCode"
+    },
+    "date": {
+      "sn": 60,
+      "model_name": "Date",
+      "comment": "",
+      "type": "int",
+      "default": 0
+    },
+    "index": [
+      [
+        "uid",
+        "side",
+        "status"
+      ],
+      [
+        "euid",
+        "side",
+        "pay_type"
+      ],
+      [
+        "euid",
+        "side",
+        "date"
+      ]
+    ]
+  },
+  "otc_exchanger_verify": {
+    "model_name": "OtcExchangerVerify",
+    "comment": "otc exchanger verify",
+    "id": {
+      "sn": 1,
+      "model_name": "Id",
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "int"
+    },
+    "uid": {
+      "sn": 2,
+      "model_name": "Uid",
+      "comment": "user id",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "mobile": {
+      "sn": 3,
+      "model_name": "Mobile",
+      "comment": "Mobile",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "wechat": {
+      "sn": 5,
+      "model_name": "Wechat",
+      "comment": "Wechat",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "telegram": {
+      "sn": 7,
+      "model_name": "Telegram",
+      "comment": "telegram",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "status": {
+      "sn": 9,
+      "model_name": "Status",
+      "comment": "status",
+      "null": false,
+      "type": "tinyint"
+    },
+    "from": {
+      "sn": 10,
+      "model_name": "From",
+      "comment": "from",
+      "null": false,
+      "type": "tinyint"
+    },
+    "ctime": {
+      "sn": 11,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 12,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Utime"
+    },
+    "index": [
+      [
+        "uid",
+        "mobile"
+      ]
+    ]
+  },
+  "otc_exchanger": {
+    "model_name": "OtcExchanger",
+    "comment": "otc exchanger",
+    "uid": {
+      "sn": 1,
+      "model_name": "Uid",
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "mobile": {
+      "sn": 2,
+      "model_name": "Mobile",
+      "comment": "Mobile",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "wechat": {
+      "sn": 3,
+      "model_name": "Wechat",
+      "comment": "Wechat",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "telegram": {
+      "sn": 4,
+      "model_name": "Telegram",
+      "comment": "telegram",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "from": {
+      "sn": 5,
+      "model_name": "From",
+      "comment": "from",
+      "null": false,
+      "type": "tinyint"
+    },
+    "ctime": {
+      "sn": 6,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 7,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Utime"
+    }
+  },
+  "otc_msg": {
+    "model_name": "OtcMsg",
+    "comment": "Otc Message",
+    "id": {
+      "sn": 1,
+      "model_name": "Id",
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned"
+    },
+    "order_id": {
+      "sn": 2,
+      "model_name": "OrderId",
+      "comment": "Order id",
+      "null": false,
+      "type": "bigint"
+    },
+    "uid": {
+      "sn": 3,
+      "model_name": "Uid",
+      "comment": "Msg Uid",
+      "null": false,
+      "type": "bigint unsigned"
+    },
+    "content": {
+      "sn": 4,
+      "model_name": "Content",
+      "comment": "Msg Content",
+      "null": false,
+      "type": "text"
+    },
+    "is_read": {
+      "sn": 5,
+      "model_name": "IsRead",
+      "comment": "is_read 1--have read 0--unread",
+      "type": "tinyint unsigned"
+    },
+    "msg_type": {
+      "sn": 6,
+      "model_name": "MessageType",
+      "comment": "system--system, text--uid",
+      "type": "varchar",
+      "size": 200
+    },
+    "ctime": {
+      "sn": 7,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    }
+  },
+  "commission_stat": {
+    "model_name": "CommissionStat",
+    "comment": "commission statistic daily table",
+    "ctime": {
+      "sn": 1,
+      "comment": "ctime",
+      "pk": true,
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "tax_integer": {
+      "sn": 2,
+      "comment": "tax integer part",
+      "type": "int",
+      "model_name": "TaxInteger"
+    },
+    "tax_decimals": {
+      "sn": 3,
+      "comment": "tax decimals part",
+      "type": "int",
+      "model_name": "TaxDecimals"
+    },
+    "channel_integer": {
+      "sn": 4,
+      "comment": "channel integer part",
+      "type": "int",
+      "model_name": "ChannelInteger"
+    },
+    "channel_decimals": {
+      "sn": 5,
+      "comment": "channel decimals part",
+      "type": "int",
+      "model_name": "ChannelDecimals"
+    },
+    "commission_integer": {
+      "sn": 6,
+      "comment": "commission integer part",
+      "type": "int",
+      "model_name": "CommissionInteger"
+    },
+    "commission_decimals": {
+      "sn": 7,
+      "comment": "commission decimals part",
+      "type": "int",
+      "model_name": "CommissionDecimals"
+    },
+    "profit_integer": {
+      "sn": 8,
+      "comment": "profit integer part",
+      "type": "int",
+      "model_name": "ProfitInteger"
+    },
+    "profit_decimals": {
+      "sn": 9,
+      "comment": "profit decimals part",
+      "type": "int",
+      "model_name": "ProfitDecimals"
+    },
+    "mtime": {
+      "sn": 10,
+      "comment": "modified time",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Mtime"
+    },
+    "status": {
+      "sn": 11,
+      "comment": "status",
+      "type": "tinyint unsigned",
+      "model_name": "Status"
+    }
+  },
+  "commission_calc": {
+    "model_name": "CommissionCalc",
+    "comment": "commission log table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "start": {
+      "sn": 2,
+      "comment": "commission start",
+      "null": false,
+      "type": "varchar",
+      "size": 16,
+      "model_name": "Start"
+    },
+    "end": {
+      "sn": 3,
+      "comment": "commission end",
+      "null": false,
+      "type": "varchar",
+      "size": 16,
+      "model_name": "End"
+    },
+    "calc_start": {
+      "sn": 4,
+      "comment": "calc start",
+      "null": false,
+      "type": "varchar",
+      "size": 128,
+      "model_name": "CalcStart"
+    },
+    "calc_end": {
+      "sn": 5,
+      "comment": "calc end",
+      "null": false,
+      "type": "varchar",
+      "size": 128,
+      "model_name": "CalcEnd"
+    },
+    "status": {
+      "sn": 6,
+      "comment": "status",
+      "type": "tinyint unsigned",
+      "model_name": "Status"
+    },
+    "desc": {
+      "sn": 7,
+      "comment": "desc",
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Desc"
+    }
+  },
+  "commission_distribute": {
+    "model_name": "CommissionDistribute",
+    "comment": "commission distribute table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "start": {
+      "sn": 2,
+      "comment": "commission start",
+      "null": false,
+      "type": "varchar",
+      "size": 16,
+      "model_name": "Start"
+    },
+    "end": {
+      "sn": 3,
+      "comment": "commission end",
+      "null": false,
+      "type": "varchar",
+      "size": 16,
+      "model_name": "End"
+    },
+    "distribute_start": {
+      "sn": 4,
+      "comment": "distribute start",
+      "null": false,
+      "type": "varchar",
+      "size": 128,
+      "model_name": "DistributeStart"
+    },
+    "distribute_end": {
+      "sn": 5,
+      "comment": "distribute end",
+      "null": false,
+      "type": "varchar",
+      "size": 128,
+      "model_name": "DistributeEnd"
+    },
+    "status": {
+      "sn": 6,
+      "comment": "status",
+      "type": "tinyint unsigned",
+      "model_name": "Status"
+    },
+    "desc": {
+      "sn": 7,
+      "comment": "desc",
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Desc"
+    }
+  },
+  "user_login_log": {
+    "model_name": "UserLoginLog",
+    "comment": "user login log table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "user_id": {
+      "sn": 2,
+      "comment": "user_id",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Userid"
+    },
+    "user_agent": {
+      "sn": 3,
+      "comment": "",
+      "type": "varchar",
+      "null": true,
+      "size": 256,
+      "model_name": "UserAgent"
+    },
+    "ips": {
+      "sn": 4,
+      "comment": "ips",
+      "type": "varchar",
+      "null": true,
+      "size": 256,
+      "model_name": "Ips"
+    },
+    "ctime": {
+      "sn": 5,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "index": [
+      [
+        "ctime"
+      ]
+    ]
+  },
+  "appeal": {
+    "model_name": "Appeal",
+    "comment": "appeal table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "type": {
+      "sn": 2,
+      "comment": "type",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Type"
+    },
+    "user_id": {
+      "sn": 3,
+      "comment": "user_id",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "UserId"
+    },
+    "admin_id": {
+      "sn": 4,
+      "comment": "admin_id",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "AdminId"
+    },
+    "order_id": {
+      "sn": 5,
+      "comment": "order_id",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "OrderId"
+    },
+    "context": {
+      "sn": 6,
+      "comment": "context",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Context"
+    },
+    "status": {
+      "sn": 7,
+      "comment": "status",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Status"
+    },
+    "ctime": {
+      "sn": 8,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "utime": {
+      "sn": 9,
+      "comment": "update time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Utime"
+    },
+    "wechat": {
+      "sn": 10,
+      "model_name": "Wechat",
+      "comment": "Wechat",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "index": [
+      [
+        "order_id",
+        "type",
+        "status"
+      ]
+    ]
+  },
+  "appeal_deal_log": {
+    "model_name": "AppealDealLog",
+    "comment": "appeal_deal_log table",
+    "id": {
+      "sn": 1,
+      "comment": "id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "appeal_id": {
+      "sn": 2,
+      "comment": "appeal_id",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "AppealId"
+    },
+    "admin_id": {
+      "sn": 3,
+      "comment": "admin_id",
+      "null": false,
+      "type": "int unsigned",
+      "model_name": "AdminId"
+    },
+    "order_id": {
+      "sn": 4,
+      "comment": "order_id",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "OrderId"
+    },
+    "action": {
+      "sn": 5,
+      "comment": "action",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Action"
+    },
+    "ctime": {
+      "sn": 6,
+      "comment": "create time",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Ctime"
+    },
+    "index": [
+      [
+        "appeal_id",
+        "order_id",
+        "admin_id"
+      ]
+    ]
+  },
+  "user_pay_pass": {
+    "model_name": "UserPayPassword",
+    "comment": "User Pay Password",
+    "uid": {
+      "sn": 1,
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "pass": {
+      "sn": 2,
+      "comment": "password",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Password"
+    },
+    "salt": {
+      "sn": 3,
+      "comment": "salt",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "Salt"
+    },
+    "sign_salt": {
+      "sn": 4,
+      "comment": "sign salt",
+      "null": false,
+      "type": "varchar",
+      "size": 256,
+      "model_name": "SignSalt"
+    },
+    "status": {
+      "sn": 5,
+      "comment": "status",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Status"
+    },
+    "method": {
+      "sn": 6,
+      "comment": "setting pwd method",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "Method"
+    },
+    "verify_step": {
+      "sn": 7,
+      "comment": "0 pass verify 1 pass&sms verify",
+      "null": false,
+      "type": "tinyint",
+      "model_name": "VerifyStep"
+    },
+    "timestamp": {
+      "sn": 8,
+      "comment": "timestamp",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "Timestamp"
+    },
+    "unique index": [
+      [
+        "uid"
+      ]
+    ]
+  },
+  "user_config": {
+    "model_name": "UserConfig",
+    "comment": "User Config",
+    "uid": {
+      "sn": 1,
+      "comment": "user id",
+      "pk": true,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "wealth_notice": {
+      "sn": 4,
+      "model_name": "WealthNotice",
+      "comment": "wealth_notice",
+      "null": false,
+      "type": "bool"
+    },
+    "order_notice": {
+      "sn": 5,
+      "model_name": "OrderNotice",
+      "comment": "order_notice",
+      "null": false,
+      "type": "bool"
+    },
+    "index": []
+  },
+  "system_notification": {
+    "model_name": "SystemNotification",
+    "comment": "System Notification",
+    "nid": {
+      "sn": 1,
+      "comment": "notification id",
+      "pk": true,
+      "null": false,
+      "auto": false,
+      "type": "bigint unsigned",
+      "model_name": "Nid"
+    },
+    "notification_type": {
+      "sn": 2,
+      "model_name": "NotificationType",
+      "comment": "Notification Type",
+      "null": false,
+      "type": "varchar",
+      "size": 100
+    },
+    "content": {
+      "sn": 3,
+      "model_name": "Content",
+      "comment": "content",
+      "null": false,
+      "type": "text"
+    },
+    "uid": {
+      "sn": 4,
+      "comment": "uid",
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "is_read": {
+      "sn": 5,
+      "comment": "is_read",
+      "type": "int",
+      "model_name": "IsRead"
+    },
+    "ctime": {
+      "sn": 8,
+      "comment": "",
+      "null": false,
+      "type": "bigint",
+      "model_name": "Ctime"
+    },
+    "index": []
+  },
+  "eos_otc_report": {
+    "model_name": "EosOtcReport",
+    "comment": "eos otc report",
+    "id": {
+      "sn": 1,
+      "comment": "eos otc report id",
+      "pk": true,
+      "null": false,
+      "auto": true,
+      "type": "bigint unsigned",
+      "model_name": "Id"
+    },
+    "uid": {
+      "sn": 2,
+      "comment": "uid",
+      "null": false,
+      "type": "bigint unsigned",
+      "model_name": "Uid"
+    },
+    "total_order_num": {
+      "sn": 3,
+      "comment": "total_order_num",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "TotalOrderNum"
+    },
+    "success_order_num": {
+      "sn": 4,
+      "comment": "success_order_num",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "SuccessOrderNum"
+    },
+    "fail_order_num": {
+      "sn": 5,
+      "comment": "fail_order_num",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "FailOrderNum"
+    },
+    "buy_eusd_num": {
+      "sn": 6,
+      "comment": "buy_eusd_num",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "BuyEusdNum"
+    },
+    "sell_eusd_num": {
+      "sn": 7,
+      "comment": "sell_eusd_num",
+      "null": false,
+      "type": "bigint",
+      "default": 0,
+      "model_name": "SellEusdNum"
+    },
+    "date": {
+      "sn": 8,
+      "comment": "date",
+      "null": false,
+      "type": "int",
+      "default": 0,
+      "model_name": "Date"
+    },
+    "index": []
+  }
+}

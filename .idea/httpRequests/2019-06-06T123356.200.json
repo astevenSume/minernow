@@ -1,0 +1,42 @@
+{
+  "code": 200,
+  "data": {
+    "list": [
+      {
+        "uid": 188551845679988736,
+        "channel_id": 1,
+        "account": "slong",
+        "transfer_type": 1,
+        "order": "3",
+        "game_order": "1",
+        "coin_integer": "423770.0000",
+        "eusd_integer": "123703.4000",
+        "status": 2,
+        "ctime": 1559719063134,
+        "desc": "aaab",
+        "step": "2"
+      },
+      {
+        "id": 1,
+        "uid": 188551845679988736,
+        "channel_id": 1,
+        "transfer_type": 2,
+        "coin_integer": "423770.0000",
+        "eusd_integer": "2323703.4000"
+      },
+      {
+        "id": 2,
+        "uid": 188551845679988736,
+        "channel_id": 2,
+        "transfer_type": 2,
+        "coin_integer": "0.0000",
+        "eusd_integer": "0.0000"
+      }
+    ],
+    "meta": {
+      "page": 1,
+      "limit": 10,
+      "total": 3
+    }
+  }
+}

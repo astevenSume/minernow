@@ -1,0 +1,11 @@
+DROP TABLE `eos_account`;
+DROP TABLE `eos_otc`;
+DROP TABLE `eos_transaction`;
+DROP TABLE `eos_transaction_info`;
+DROP TABLE `eos_tx_log`;
+DROP TABLE `eos_use_log`;
+DROP TABLE `eos_wealth`;
+DROP TABLE `eos_wealth_log`;
+DROP TABLE `eusd_retire`;
+DROP TABLE `platform_user`;
+DROP TABLE `platform_user_cate`;
